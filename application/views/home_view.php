@@ -430,7 +430,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             <div id="preview" class="row section">
               <div class="col-md-8 col-md-offset-2">
                 <h4>Nice job. Now share it.</h4>
-                <video id="preview_video" controls width="640" height="auto" poster="img/posters/1_0.jpg">
+                <video id="preview_video" controls width="600" height="auto" poster="img/posters/1_0.jpg">
                   <source src="mp4/1_0.mp4" type='video/mp4' />
                 </video>
               </div>
@@ -445,12 +445,8 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             <div class="modal fade" id="preview_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                  </div>
                   <div class="modal-body">
-                    <video id="example_video_1" controls width="640" height="auto" poster="img/posters/1_0.jpg">
+                    <video id="example_video_1" controls width="600" height="auto" poster="img/posters/1_0.jpg">
                       <source src="mp4/1_0.mp4" type='video/mp4' />
                     </video>
                   </div>

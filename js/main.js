@@ -3,14 +3,14 @@ events 		=
 paths		=
 selections 	= {};
 
-paths.thumbnails 	= "img/timeline/";
+paths.thumbnails 	= "img/thumbnails/";
 paths.videos 		= "img/mp4/";
 
 jQuery( function($){
 	$('#nav-container li a').click(function (e) {
 	  e.preventDefault();
-
 	  $(this).tab('show')
+
 	});
 
 	main.init();
@@ -74,6 +74,9 @@ main.scrollToEditor = function(){
 main.videoChanged = function( $category, $thumb_id ){
 	console.log( "category " + $category + " changed to : " + $thumb_id );
 	var _filename = $category + "_" + $thumb_id + ".jpg";
+
+	//testing
+	var _filename = $category + "_0" + ".jpg";
 
 	$("#edit-video-nav li[data-video-category=" + $category + "] a").css( "background-image", "url(" + paths.thumbnails + _filename + ")" );
 }
