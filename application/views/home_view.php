@@ -29,97 +29,98 @@
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div id="header">
-            <img id="ball" src="<?= base_url(); ?>img/ball.png" />
             <h1>Happy Holidays</h1>
             <img src="<?= base_url(); ?>img/c3x_logo.png" />
             <p>Lorem ipsum dolor sit amet, ubrum consectetur sit adipiscing elit. 
 Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Donec quis rutrum lectus. Sed posuere semper laoreet.</p>
+            <div id="choose-videos-header">
+              <h4>Start choosing videos.</h4>
+              <div id="nav-container">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#video-category-0"><h3>2</h3></a></li>
+                  <li><a href="#video-category-1"><h3>0</h3></a></li>
+                  <li><a href="#video-category-2"><h3>1</h3></a></li>
+                  <li><a href="#video-category-3"><h3>4</h3></a></li>
+                </ul>
+              </div>
+            </div>
         </div>
 
         <!-- Nav tabs -->
         <div class="container">
-            <div id="pick-videos" class="row section">
+            <div id="pick-videos" class="row">
               <div class="col-md-12">
-                <h4>Start choosing videos.</h4>
-                <div id="nav-container">
-                  <ul class="nav nav-tabs">
-                    <li class="active"><a href="#video-category-0"><h3>2</h3></a></li>
-                    <li><a href="#video-category-1"><h3>0</h3></a></li>
-                    <li><a href="#video-category-2"><h3>1</h3></a></li>
-                    <li><a href="#video-category-3"><h3>4</h3></a></li>
-                  </ul>
-                </div>
                 <div class="tab-content">
                   <div id="video-category-0" data-video-category="0" class="tab-pane fade in active">
                     <div class="row">
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="0" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="1" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="2" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="3" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="4" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="5" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="6" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="7" data-video-category="0">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
@@ -128,83 +129,83 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                   </div>
                   <div id="video-category-1" data-video-category="1" class="tab-pane fade">
                     <div class="row">
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="0" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="1" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="2" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="3" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="2" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="4" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="5" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="6" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="7" data-video-category="1">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
@@ -213,83 +214,83 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                   </div>
                   <div id="video-category-2" data-video-category="2" class="tab-pane fade">
                     <div class="row">
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="0" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="1" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="2" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="3" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="4" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="4" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="5" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="6" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="7" data-video-category="2">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
@@ -298,110 +299,110 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                   </div>
                   <div id="video-category-3" data-video-category="4" class="tab-pane fade">
                     <div class="row">
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="0" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="1" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="2" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="3" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="4" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="5" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="6" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="7" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="8" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="9" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="10" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="thumbnail" data-id="11" data-video-category="3">
                           <div class="hover-state">
-                            <p class="preview-btn">preview</p>
-                            <p class="add-btn">Add</p>
+                            <p class="preview-btn">preview</p><!--
+                            --><p class="add-btn">Add</p>
                           </div>
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
@@ -414,14 +415,16 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             <div id="edit-video" class="row section">
               <div class="col-md-10 col-md-offset-1">
                 <h4>Edit your video.</h4>
-                <ul id="edit-video-nav"><!--
-                    --><li data-video-category="-1"><a class="btn btn-default">start</a></li><!--
-                    --><li data-video-category="0"><a class="btn btn-default">2</a></li><!--
-                    --><li data-video-category="1"><a class="btn btn-default">0</a></li><!--
-                    --><li data-video-category="2"><a class="btn btn-default">1</a></li><!--
-                    --><li data-video-category="3"><a class="btn btn-default">4</a></li><!--
-                    --><li data-video-category="4"><a class="btn btn-default">end</a></li>
-                </ul>
+                <div id="edit-video-nav-container">
+                  <p class="pull-left">start</p>
+                  <ul id="edit-video-nav"><!--
+                      --><li data-video-category="0"><a class="btn btn-default">2</a></li><!--
+                      --><li data-video-category="1"><a class="btn btn-default">0</a></li><!--
+                      --><li data-video-category="2"><a class="btn btn-default">1</a></li><!--
+                      --><li data-video-category="3"><a class="btn btn-default">4</a></li><!--
+                  --></ul>
+                  <p class="pull-right">end</p>
+                </div>
               </div>
             </div>
             <div id="preview" class="row section">
@@ -438,7 +441,6 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 </div>
               </div>
             </div>
-
             <!-- Modal -->
             <div class="modal fade" id="preview_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div class="modal-dialog">
