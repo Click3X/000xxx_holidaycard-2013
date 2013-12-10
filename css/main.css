@@ -176,14 +176,14 @@ video{
 	-webkit-transition: bottom .5s;
 }
 .thumbnail div.hover-state p{
-	font-size: 13px;
+	font-size: 12px;
 	letter-spacing: .05em;
 	display: inline-block;
 	width: 50%;
-	line-height: 40px;
+	line-height: 38px;
 	background:none;
 	margin:0 0 0 0;
-	color: #888;
+	color: #999;
 	cursor: pointer;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -314,6 +314,15 @@ video{
 		background-image: url('../img/footer_bg_480.jpg'), url('../img/header_bg_480.jpg');
 		padding-bottom: 200px;
 		padding-top:170px;
+	}
+	.thumbnail div.hover-state p{
+		line-height: 30px;
+		font-size: 10px;
+		letter-spacing: .05em;
+	}
+	#edit-video-nav-container p {
+		font-size: 12px;
+		letter-spacing:.02em;
 	}
 }
 
