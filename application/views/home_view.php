@@ -23,6 +23,7 @@
         <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     <body>
+        <img id="ball" data-src="<?php echo base_url(); ?>img/ball_320.png" alt="Ball" src="<?php echo base_url(); ?>img/ball_320.png">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -53,7 +54,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 <div class="tab-content">
                   <div id="video-category-0" data-video-category="0" class="tab-pane fade in active">
                     <div class="row">
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="0" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -62,7 +63,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="1" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -71,7 +72,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="2" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -80,7 +81,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="3" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -89,7 +90,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="4" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -98,7 +99,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="5" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -107,7 +108,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="6" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -116,7 +117,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="7" data-video-category="0">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -129,7 +130,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                   </div>
                   <div id="video-category-1" data-video-category="1" class="tab-pane fade">
                     <div class="row">
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="0" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -138,7 +139,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="1" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -147,7 +148,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="2" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -156,7 +157,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="3" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -165,7 +166,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="2" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -174,7 +175,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="4" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -183,7 +184,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="5" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -192,7 +193,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="6" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -201,7 +202,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="7" data-video-category="1">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -214,7 +215,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                   </div>
                   <div id="video-category-2" data-video-category="2" class="tab-pane fade">
                     <div class="row">
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="0" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -223,7 +224,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="1" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -232,7 +233,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="2" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -241,7 +242,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="3" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -250,7 +251,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="4" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -259,7 +260,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="4" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -268,7 +269,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="5" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -277,7 +278,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="6" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -286,7 +287,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="7" data-video-category="2">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -299,7 +300,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                   </div>
                   <div id="video-category-3" data-video-category="4" class="tab-pane fade">
                     <div class="row">
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="0" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -308,7 +309,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="1" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -317,7 +318,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="2" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -326,7 +327,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="3" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -335,7 +336,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="4" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -344,7 +345,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="5" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -353,7 +354,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="6" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -362,7 +363,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="7" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -371,7 +372,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="8" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -380,7 +381,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="9" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -389,7 +390,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="10" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--
@@ -398,7 +399,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                           <img data-src="img/thumbnails/1_0.jpg" alt="One 1" src="img/thumbnails/1_0.jpg">
                         </div>
                       </div>
-                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                      <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                         <div class="thumbnail" data-id="11" data-video-category="3">
                           <div class="hover-state">
                             <p class="preview-btn">preview</p><!--

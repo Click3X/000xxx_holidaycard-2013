@@ -7,12 +7,17 @@ html,body{
 }
 body{
 	background-color: #000;
-	background-image: url('../img/footer_bg.jpg'), url('../img/header_bg.jpg');
+	background-image: url('../img/footer_bg_1200.jpg'), url('../img/header_bg_1200.jpg');
 	background-repeat: no-repeat;
 	background-position: center bottom, center top;
+	padding-bottom: 400px;
+	padding-top:360px;
 }
 #ball{
-	margin-top:-40px;
+	position: absolute;
+	left:50%;
+	margin-left: -160px;
+	top:10px;
 }
 h1,h3,h2,h4{
 	color:#FFF !important;
@@ -49,7 +54,7 @@ video{
 }
 #edit-video-nav-container{
 	position: relative;
-	background: rgba(180,20,20,1);
+	background: #d0211b;
 
 	-webkit-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.7);
 	-moz-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.7);
@@ -75,7 +80,7 @@ video{
 	width: 66.66666666666%;
 	margin-left: 16.66666666666%;
 	padding:0;
-	background: #333;
+	background: #222;
 	border:none;
 }
 #edit-video-nav li{
@@ -90,7 +95,7 @@ video{
 	padding-left:2px;
 }
 #edit-video-nav li a{
-	color:#333;
+	color:#111;
 	font-size: 50px;
 	font-weight: 800;
 	display: block;
@@ -103,17 +108,6 @@ video{
 	-webkit-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.4);
 	-moz-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.4);
 	box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.4);
-}
-.up-triangle {
-	display: none;
-	position: absolute;
-	bottom:0;
-	left:0;
-	width: 0; 
-	height: 0; 
-	border-bottom: 20px solid #CCC; 
-	border-left: 20px solid transparent; 
-	border-right: 20px solid transparent; 
 }
 
 /*Override bootstrap*/
@@ -142,7 +136,7 @@ video{
 .nav-tabs li h3{
 	font-weight: 800;
 	font-size: 50px;
-	color:#D72D27 !important;
+	color:#d0211b !important;
 }
 .nav-tabs li.active h3{
 	color:#FFF !important;
@@ -163,17 +157,17 @@ video{
 	display: inline-block;
 }
 .thumbnail div.hover-state{
-	display: none;
 	position: absolute;
 	text-align: center;
-	bottom:0;
+	bottom:-40px;
 	width: 100%;
 	background-color: #333;
-	/*transition: opacity .5s;
-	-webkit-transition: opacity .5s;*/
+	transition: bottom .5s;
+	-webkit-transition: bottom .5s;
 }
 .thumbnail div.hover-state p{
-	font-size: 14px;
+	font-size: 13px;
+	letter-spacing: .05em;
 	display: inline-block;
 	width: 50%;
 	line-height: 40px;
@@ -186,18 +180,17 @@ video{
 	border: none;
 }
 .thumbnail div.hover-state p.add-btn{
-	border-left: 1px #888 solid;
 }
 .thumbnail div.hover-state p.preview-btn{
-	border-right: 2px #111 solid;
+	border-right: 2px #222 solid;
 }
-.thumbnail:hover div.hover-state{
-	display: block;
+.ismobile .thumbnail div.hover-state, .thumbnail:hover div.hover-state{
+	bottom:0;
 }
 .thumbnail:hover p:hover{
-	background:rgba(180,20,20,1);
+	background:#d0211b;
 	color: #FFF;
-	/*border-color:rgba(180,20,20,1) !important;*/
+	/*border-color:#d0211b !important;*/
 }
 .btn,.btn-default{
 	background-color: #ccc;
@@ -213,10 +206,12 @@ video{
 	padding:10px;
 }
 #header{
-	padding-top: 380px;
 	border-bottom: 4px solid #333;
 	text-align: center;
 	margin-bottom: 40px;
+}
+#header img{
+	padding-bottom: 6px;
 }
 #header h1{
 	font-weight: 600;
@@ -236,10 +231,8 @@ video{
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 26px;
+	padding: 0 10px;
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
-}
-#footer{
-	min-height: 500px;
 }
 #preview,#preview_modal{
 	text-align: center;
@@ -248,16 +241,70 @@ video{
 	background: none;
 	border-radius: 0;
 	-webkit-box-shadow: none;
-box-shadow: none;
+	box-shadow: none;
+}
+
+/*smaller than 768*/
+@media (max-width: 768px) {
+	#ball{
+		width: 300px;
+		height: auto;
+		margin-left: -150px;
+		top:-60px;
+	}
+	body{
+		background-image: url('../img/footer_bg_768.jpg'), url('../img/header_bg_768.jpg');
+		padding-bottom: 280px;
+		padding-top:240px;
+	}
 }
 
 /*smaller than 480*/
-@media (max-width: 640px) {
+@media (max-width: 480px) {
+	#ball{
+		top:-140px;
+	}
+	#header h1{
+		font-size: 34px !important;
+	}
+	#header p{
+		font-size: 12px;
+		line-height: 20px;
+	}
+	body{
+		background-image: url('../img/footer_bg_480.jpg'), url('../img/header_bg_480.jpg');
+		padding-bottom: 200px;
+		padding-top:170px;
+	}
 	.modal-dialog {
 		width: 100%;
 	}
 	.modal-body {
 		padding: 0px 0px 10px 0px;
+	}
+	.thumbnail div.hover-state{
+		bottom:0;
+	}
+}
+
+/*smaller than 320*/
+@media (max-width: 340px) {
+	#ball{
+		width: 280px;
+		height: auto;
+		margin-left: -140px;
+		top:-118px;
+	}
+	body{
+		padding-top:174px;
+	}
+	#header h1{
+		font-size: 30px !important;
+	}
+	body{
+		background-image: url('../img/footer_bg_480.jpg'), url('../img/header_bg_480.jpg');
+		padding-bottom: 200px;
+		padding-top:170px;
 	}
 }
 
