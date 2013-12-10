@@ -9,13 +9,20 @@ paths.videos 		= "img/mp4/";
 jQuery( function($){
 	$('#nav-container li a').click(function (e) {
 	  e.preventDefault();
-	  $(this).tab('show')
+	  $(this).tab('show');
+	  var pos = $(this).parent().position().left;
+	  console.log(pos);
 
+	  main.positionCaret(pos);
 	});
 
 	main.init();
 	main.addEventListeners();
 });
+
+main.positionCaret = function(_x){
+	$("#nav-container img#arrow").css("left",_x+9);
+}
 
 main.init = function(){
 	selections["0"] = selections["1"] =	

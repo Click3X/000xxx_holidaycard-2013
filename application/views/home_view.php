@@ -31,12 +31,13 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div id="header">
             <h1>Happy Holidays</h1>
-            <img src="<?= base_url(); ?>img/c3x_logo.png" />
+            <p><img id="logo" src="<?= base_url(); ?>img/c3x_logo.png" /></p>
             <p>Lorem ipsum dolor sit amet, ubrum consectetur sit adipiscing elit. 
 Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Donec quis rutrum lectus. Sed posuere semper laoreet.</p>
             <div id="choose-videos-header">
               <h4>Start choosing videos.</h4>
               <div id="nav-container">
+                <img id="arrow" src="<?= base_url(); ?>img/up_arrow.jpg" />
                 <ul class="nav nav-tabs">
                   <li class="active"><a href="#video-category-0"><h3>2</h3></a></li>
                   <li><a href="#video-category-1"><h3>0</h3></a></li>
