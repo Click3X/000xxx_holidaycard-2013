@@ -19,37 +19,43 @@ class Encoder extends CI_Controller {
 	 */
 	public function index()
 	{
+		echo "Call the combine method to concatenate your videos.";
 	}
 
 	public function combine($two = "0",$zero = "0",$one = "0",$four = "0"){
 		$files = array();
 
+		//write the file names to txt file
 		$files[0] = "'".base_url()."mp4/2_".$two.".mp4'";
 		$files[1] = "'".base_url()."mp4/0_".$zero.".mp4'";
 		$files[2] = "'".base_url()."mp4/1_".$one.".mp4'";
 		$files[3] = "'".base_url()."mp4/4_".$four.".mp4'";
 
+		$sources = "file ".implode("\nfile ", $files);
 		$filelist = FCPATH."filelist.txt";
+		$savefile = file_put_contents($filelist, $sources);
+
+		//build the ffmpeg command and exec
 		$outputfile_previx = $two.$zero.$one.$four;
 		$outputfilename = $outputfile_previx."_".time()."_.mp4";
 		$outputpath = FCPATH."output/".$outputfilename;
-
-		$sources = "file ".implode("\nfile ", $files);
-		$savefile = file_put_contents($filelist, $sources);
-		//echo $savefile;
+		$output_http_location = base_url()."output/".$outputfilename;
 
 		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$outputpath;
-
 		exec($command, $output, $result);
 
-		echo $result ;
+		//build the response
+		$response = (object) "response";
 
 		if($result === 0){
-			echo "Success-Loading video";
-			redirect( base_url()."output/".$outputfilename );
+			$response->status = "success";
+			$response->video = $output_http_location;
 		}else{
-			echo "Failed-".$result;
+			$response->status = "failed";
+			$response->error = $result;
 		}
+
+		echo json_encode($response);
 	}
 }
 
