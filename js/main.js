@@ -79,6 +79,9 @@ main.scrollToEditor = function(){
 }
 
 main.videoChanged = function( $category, $thumb_id ){
+	main.getCombinedVideo();
+	
+
 	console.log( "category " + $category + " changed to : " + $thumb_id );
 	var _filename = $category + "_" + $thumb_id + ".jpg";
 
@@ -93,5 +96,23 @@ main.videoChanged = function( $category, $thumb_id ){
 	_span.css( "background-image", "url(../img/overlay_bg.png), url(" + paths.thumbnails + _filename + ")" );
 }
 
+main.getCombinedVideo = function(){
+	$.ajax({
+        type: 'GET',
+        url: "http://dev.clickfiremedia.com/holidaycard-2013/index.php/encoder/combine",
+        dataType: "json",
+        success: function (response) {
+        	console.log(response);
 
+            if(response.status == "success"){
+            	console.log("success : " + response.video);
+            }else{
+            	console.log("ffmpeg video error: " + response.error);
+            }
+        },
+        error:function(error){
+        	console.log("server video error");
+        }
+    });
+}
 
