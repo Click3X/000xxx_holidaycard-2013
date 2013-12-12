@@ -39,10 +39,8 @@ class Encoder extends CI_Controller {
 
 		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$output;
 
-		echo $command;
-
-		// exec($command, $output, $result);
-		// echo $result ;
+		exec($command, $output, $result);
+		echo $result ;
 	}
 }
 
