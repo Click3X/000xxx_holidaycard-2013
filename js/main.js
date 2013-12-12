@@ -80,7 +80,7 @@ main.scrollToEditor = function(){
 
 main.videoChanged = function( $category, $thumb_id ){
 	main.getCombinedVideo();
-	
+
 
 	console.log( "category " + $category + " changed to : " + $thumb_id );
 	var _filename = $category + "_" + $thumb_id + ".jpg";
@@ -106,6 +106,9 @@ main.getCombinedVideo = function(){
 
             if(response.status == "success"){
             	console.log("success : " + response.video);
+
+            	$("#preview-video-source").attr('src', response.video);
+			    //$("#preview-video").load();
             }else{
             	console.log("ffmpeg video error: " + response.error);
             }
