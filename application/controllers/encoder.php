@@ -33,8 +33,8 @@ class Encoder extends CI_Controller {
 		$command = "ffmpeg -f concat:'".$sources."' -c copy ".FCPATH."/outputs/combined_".time()."_.mp4 -loglevel debug";
 		echo $command;
 
-		//exec("ffmpeg -f concat:'".$sources."' -c copy ".FCPATH."/outputs/combined_".time()."_.mp4 -loglevel debug", $output, $result);
-		//echo $result ;
+		exec("ffmpeg -f concat:'".$sources."' -c copy ".FCPATH."/outputs/combined_".time()."_.mp4 -loglevel debug", $output, $result);
+		echo $result ;
 	}
 }
 
