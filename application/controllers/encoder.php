@@ -24,17 +24,25 @@ class Encoder extends CI_Controller {
 	public function combine($two = "0",$zero = "0",$one = "0",$four = "0"){
 		$files = array();
 
-		$files[0] = base_url()."mp4/2_".$two.".mp4";
-		$files[1] = base_url()."mp4/0_".$zero.".mp4";
-		$files[2] = base_url()."mp4/1_".$one.".mp4";
-		$files[3] = base_url()."mp4/4_".$four.".mp4";
+		$files[0] = "'".base_url()."mp4/2_".$two.".mp4'";
+		$files[1] = "'".base_url()."mp4/0_".$zero.".mp4'";
+		$files[2] = "'".base_url()."mp4/1_".$one.".mp4'";
+		$files[3] = "'".base_url()."mp4/4_".$four.".mp4'";
 
-		$sources = implode("|", $files);
-		$command = "ffmpeg -f concat:'".$sources."' -c copy ".FCPATH."/outputs/combined_".time()."_.mp4 -loglevel debug";
+		$filelist = FCPATH."filelist.txt";
+		$outputfile_previx = $two.$zero.$one.$four;
+		$output = FCPATH."output/".$outputfile_previx."_".time()."_.mp4";
+
+		$sources = "file ".implode("\nfile ", $files);
+		$savefile = file_put_contents($filelist, $sources);
+		//echo $savefile;
+
+		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$output;
+
 		echo $command;
 
-		exec("ffmpeg -f concat:'".$sources."' -c copy ".FCPATH."/outputs/combined_".time()."_.mp4 -loglevel debug", $output, $result);
-		echo $result ;
+		// exec($command, $output, $result);
+		// echo $result ;
 	}
 }
 
