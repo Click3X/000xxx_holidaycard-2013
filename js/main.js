@@ -21,7 +21,7 @@ jQuery( function($){
 });
 
 main.positionCaret = function(_x){
-	$("#nav-container img#arrow").css("left",_x+9);
+	$("#nav-container img#arrow").css("left",_x+14);
 }
 
 main.init = function(){
@@ -64,7 +64,7 @@ events.onAddClicked = function( $e ){
 main.nextCategory = function( _currentCategory ){
 	var _nextCategory = Number(_currentCategory) + 1;
 
-	if(_nextCategory > 3){
+	if(_nextCategory == 4){
 		main.scrollToEditor();
 	}else{
 		$('#nav-container li:eq(' + String(_nextCategory) + ') a').tab('show');
@@ -84,8 +84,13 @@ main.videoChanged = function( $category, $thumb_id ){
 
 	//testing
 	var _filename = $category + "_0" + ".jpg";
+	var _li = $("#edit-video-nav li[data-video-category=" + $category + "]");
+	var _span = $("#edit-video-nav li[data-video-category=" + $category + "] span");
 
-	$("#edit-video-nav li[data-video-category=" + $category + "] a").css( "background-image", "url(" + paths.thumbnails + _filename + ")" );
+	if(!_li.hasClass("selected"))
+		_li.addClass("selected");
+
+	_span.css( "background-image", "url(../img/overlay_bg.png), url(" + paths.thumbnails + _filename + ")" );
 }
 
 
