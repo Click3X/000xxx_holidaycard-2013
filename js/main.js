@@ -99,7 +99,7 @@ main.videoChanged = function( $category, $thumb_id ){
 main.getCombinedVideo = function(){
 	$.ajax({
         type: 'GET',
-        url: "http://dev.clickfiremedia.com/holidaycard-2013/index.php/encoder/combine",
+        url: base_url + "encoder/combine",
         dataType: "json",
         success: function (response) {
         	console.log(response);
