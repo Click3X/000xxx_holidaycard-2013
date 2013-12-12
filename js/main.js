@@ -107,8 +107,8 @@ main.getCombinedVideo = function(){
             if(response.status == "success"){
             	console.log("success : " + response.video);
 
-            	$("#preview-video").attr('src', response.video);
-			    //$("#preview-video").load();
+            	$("#preview-video-source").attr('src', response.video);
+			    $("#preview-video").load();
             }else{
             	console.log("ffmpeg video error: " + response.error);
             }

@@ -454,8 +454,8 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             <div id="preview" class="row section">
               <div class="col-md-8 col-md-offset-2">
                 <h4>Preview your video.</h4>
-                <video id="preview_video" controls width="600" height="auto" poster="img/posters/1_0.jpg">
-                  <source src="mp4/1_0.mp4" type='video/mp4' />
+                <video id="preview-video" controls width="600" height="auto" poster="img/posters/1_0.jpg">
+                  <source id="preview-video-source"  src="" type='video/mp4' />
                 </video>
               </div>
             </div>
@@ -479,15 +479,15 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <video id="preview-video" controls width="600" height="auto" poster="img/posters/1_0.jpg">
-                      <source id="preview-video-source" src="" type='video/mp4' />
+                    <video controls width="600" height="auto" poster="img/posters/1_0.jpg">
+                      <source src="" type='video/mp4' />
                     </video>
                   </div>
                 </div>
               </div>
             </div>
         </div>
-        
+
 
         <script src="<?php echo base_url(); ?>js/jquery-1.9.1.min.js"></script>    
         <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
