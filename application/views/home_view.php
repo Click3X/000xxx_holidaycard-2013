@@ -22,6 +22,9 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/video.css">
 
         <script src="<?php echo base_url(); ?>js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script type="text/javascript">
+        var base_url = "<?= base_url();?>";
+        </script>
     </head>
     <body>
         <img id="ball" data-src="<?php echo base_url(); ?>img/ball_320.png" alt="Ball" src="<?php echo base_url(); ?>img/ball_320.png">
