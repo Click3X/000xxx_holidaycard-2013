@@ -31,16 +31,25 @@ class Encoder extends CI_Controller {
 
 		$filelist = FCPATH."filelist.txt";
 		$outputfile_previx = $two.$zero.$one.$four;
-		$output = FCPATH."output/".$outputfile_previx."_".time()."_.mp4";
+		$outputfilename = $outputfile_previx."_".time()."_.mp4";
+		$outputpath = FCPATH."output/".$outputfilename;
 
 		$sources = "file ".implode("\nfile ", $files);
 		$savefile = file_put_contents($filelist, $sources);
 		//echo $savefile;
 
-		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$output;
+		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$outputpath;
 
 		exec($command, $output, $result);
+
 		echo $result ;
+
+		if($result === 0){
+			echo "Success-Loading video";
+			redirect( base_url()."output/".$outputfilename );
+		}else{
+			echo "Failed-".$result;
+		}
 	}
 }
 
