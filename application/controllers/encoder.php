@@ -38,22 +38,35 @@ class Encoder extends CI_Controller {
 		//build the ffmpeg command and exec
 		$outputfile_previx = $two.$zero.$one.$four;
 		$outputfilename = $outputfile_previx."_".time()."_.mp4";
+		$audio = FCPATH."mp4/audio.mp4";
+		$tmppath = FCPATH."tmp/".$outputfilename;
 		$outputpath = FCPATH."output/".$outputfilename;
 		$output_http_location = base_url()."output/".$outputfilename;
 
-		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$outputpath;
+		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$tmppath;
 		exec($command, $output, $result);
 
-		//build the response
 		$response = (object) "response";
 
-		if($result === 0){
-			$response->status = "success";
-			$response->video = $output_http_location;
+		if($result === 0){		
+			//if success on concat, add the audio.	
+			$command = "ffmpeg -i ".$audio." -i ".$tmppath." -c copy -map 0:a:0 -map 1:v:0 -shortest ".$outputpath;
+			exec($command, $output, $result);
+
+			if($result === 0){
+				$response->status = "success";
+				$response->video = $output_http_location;
+			}else{
+				$response->status = "failed";
+				$response->error = "failed to write final output file : ". $result;
+			}
+
+			//remove the tmp file
+			unlink($tmppath);
 		}else{
 			$response->status = "failed";
-			$response->error = $result;
-		}
+			$response->error = "failed to write tmp file : ". $result;
+		}		
 
 		echo json_encode($response);
 	}
