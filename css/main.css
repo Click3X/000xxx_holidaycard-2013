@@ -61,32 +61,35 @@ video{
 	-webkit-box-shadow: inset 0px 0px 20px 2px rgba(0,0,0,0.8);
 	-moz-box-shadow: inset 0px 0px 20px 2px rgba(0,0,0,0.8);
 	box-shadow: inset 0px 0px 20px 2px rgba(0,0,0,0.8);
+
+	border: 8px solid #111;
+	border-radius: 10px;	
 }
 #edit-video-nav-container p{
+	font-family: 'Gotham-Bold', sans-serif;
 	font-size: 15px;
 	text-transform: uppercase;
-	letter-spacing: 1px;
 	width: 16.66666666666%;
 	display: block;
 	position: absolute;
 	top:0;
-	line-height: 80px;
+	line-height: 120px;
 	text-align: center;
 }
 #edit-video-nav-container p:last-child{
 	right: 0;
 }
 #edit-video-nav{
+	margin:0;
 	width: 66.66666666666%;
 	margin-left: 16.66666666666%;
 	padding:0;
-	background: -moz-linear-gradient(top, #444444 0%, #222222 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444444), color-stop(100%,#222222)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #444444 0%,#222222 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #444444 0%,#222222 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #444444 0%,#222222 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #444444 0%,#222222 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#222222',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top, #111111 0%, #444444 50%, #111111 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#111111), color-stop(50%,#222222),color-stop(100%,#111111)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,#111111 0%, #444444 50%, #111111 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #111111 0%, #444444 50%, #111111 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #111111 0%, #444444 50%, #111111 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #111111 0%, #444444 50%, #111111 100%); /* W3C */
 	border:none;
 }
 #edit-video-nav li{
@@ -105,7 +108,7 @@ video{
 	display: block;
 	padding:0;
 	margin:0;
-	height: 80px;
+	height: 120px;
 
 	/*background*/
 	background: url('../img/gray_button_bg.jpg');
@@ -121,7 +124,7 @@ video{
 	font-size: 68px;
 	color:#000 !important;
 	padding:0;
-	line-height: 80px;
+	line-height: 120px;
 	margin:0;
 }
 
@@ -146,7 +149,7 @@ video{
 	display: none;
 	cursor: pointer;
 	position: absolute;
-	top:8px;
+	top:12px;
 	right:8px;
 	float: right;
 	width: 22px;
@@ -251,14 +254,14 @@ video{
 	border-top: 1px solid #111;
 }
 .thumbnail div.hover-state p{
-	font-family: 'Gotham-Book', sans-serif !important;
+	font-family: 'Gotham-Bold', sans-serif !important;
 	font-size: 14px;
 	display: inline-block;
 	width: 50%;
 	line-height: 50px;
 	background:none;
 	margin:0 0 0 0;
-	color: #999;
+	color: #CCC;
 	cursor: pointer;
 	text-transform: uppercase;
 	border: none;

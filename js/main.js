@@ -3,30 +3,31 @@ events 		=
 paths		=
 selections 	= {};
 
-paths.thumbnails 	= "img/thumbnails/";
-paths.videos 		= "img/mp4/";
+paths.selected_thumbs	= "img/thumbnails/300/";
+paths.videos 			= "img/mp4/";
+
+var categories = [];
+var current_category = {id:null,index:null};
 
 jQuery( function($){
-	$('#nav-container li a').click(function (e) {
-	  e.preventDefault();
-	  $(this).tab('show');
-	  var pos = $(this).parent().position().left;
-	  console.log(pos);
-
-	  main.positionCaret(pos);
+	$.each(categories, function(i,v){
+		selections[v] = -1;
 	});
 
-	main.init();
+	console.log(categories);
+
+	$('#nav-container li a').click(function (e) {
+	  e.preventDefault();
+	  main.showCategory( $(this).attr("data-id") );
+	});
+
 	main.addEventListeners();
+	main.showCategory("2");
 });
 
 main.positionCaret = function(_x){
+	//var pos = $(this).parent().position().left;
 	$("#nav-container img#arrow").css("left",_x+14);
-}
-
-main.init = function(){
-	selections["0"] = selections["1"] =	
-	selections["2"]	= selections["3"] = { last:null, current:null };
 }
 
 main.addEventListeners = function(){
@@ -44,31 +45,40 @@ events.onAddClicked = function( $e ){
 	var _thumb_id	= _thumb.attr("data-id"),
 	_category 		= _thumb.attr("data-video-category");
 
-	if( selections[ _category ].current == null ){
-		selections[ _category ].last = 
-		selections[ _category ].current = _thumb_id;
-
+	 if( selections[ _category ] != _thumb_id ){
 		main.videoChanged( _category, _thumb_id );
-	} else if( selections[ _category ].last != _thumb_id ){
-		selections[ _category ].current = _thumb_id;
-		selections[ _category ].last = selections[ _category ].current;
-
-		main.videoChanged( _category, _thumb_id );
-	} else {
+		selections[ _category ] = _thumb_id;
+	 } else {
 		console.log("video is already selected");
 	}
 
 	main.nextCategory( _category );
 }
 
-main.nextCategory = function( _currentCategory ){
-	var _nextCategory = Number(_currentCategory) + 1;
-
-	if(_nextCategory == 4){
-		main.scrollToEditor();
+main.nextCategory = function(){
+	if( current_category.index == categories.length-1 ){
+		//main.scrollToEditor();
 	}else{
-		$('#nav-container li:eq(' + String(_nextCategory) + ') a').tab('show');
+		main.showCategory( categories[ current_category.index+1 ] );
 	}
+
+	// var _nextCategory = Number(_currentCategory) + 1;
+
+	// if(_nextCategory == 4){
+	// 	main.scrollToEditor();
+	// }else{
+	// 	$('#nav-container li:eq(' + String(_nextCategory) + ') a').tab('show');
+	// }
+}
+
+main.showCategory = function( _category_id ){
+	current_category.id = _category_id;
+	current_category.index = categories.indexOf(_category_id);
+
+	console.log("showing category : ");
+	console.log(current_category);
+
+	$('#category-nav li a[data-id='+ current_category.id +']' ).tab('show');
 }
 
 main.scrollToEditor = function(){
@@ -79,21 +89,16 @@ main.scrollToEditor = function(){
 }
 
 main.videoChanged = function( $category, $thumb_id ){
-	main.getCombinedVideo();
-
-
 	console.log( "category " + $category + " changed to : " + $thumb_id );
-	var _filename = $category + "_" + $thumb_id + ".jpg";
 
-	//testing
-	var _filename = $category + "_0" + ".jpg";
-	var _li = $("#edit-video-nav li[data-video-category=" + $category + "]");
-	var _span = $("#edit-video-nav li[data-video-category=" + $category + "] span");
+	var _filename = $category + "_" + $thumb_id + ".jpg";
+	var _li = $("#edit-video-nav li[data-id=" + $category + "]");
+	var _span = _li.children("span").eq(0);
 
 	if(!_li.hasClass("selected"))
 		_li.addClass("selected");
 
-	_span.css( "background-image", "url(../img/overlay_bg.png), url(" + paths.thumbnails + _filename + ")" );
+	_span.css( "background-image", "url(../img/overlay_bg.png), url(" + paths.selected_thumbs + _filename + ")" );
 }
 
 main.getCombinedVideo = function(){

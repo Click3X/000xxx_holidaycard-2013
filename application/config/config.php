@@ -1,5 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+$config['category_list'] = array("2"=>"12","0"=>"12","1"=>"12","4"=>"12"); 
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
