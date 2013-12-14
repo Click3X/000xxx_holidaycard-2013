@@ -43,7 +43,7 @@ p{
 }
 video{
 	width: 100%;
-	height: auto;
+	/*height: auto;*/
 	border: 8px solid rgba(0,0,0,.4);
 	border-radius: 4px;
 	max-width: 600px;
@@ -263,6 +263,12 @@ video{
 	-webkit-transition: bottom .3s;
 	border-top: 1px solid #111;
 }
+.touch .thumbnail{
+	padding-bottom: 40px;
+}
+.touch .thumbnail div.hover-state{
+	bottom:0;
+}
 .thumbnail div.hover-state p{
 	font-family: 'Gotham-Bold', sans-serif !important;
 	font-size: 12px;
@@ -282,7 +288,7 @@ video{
 .thumbnail div.hover-state p.preview-btn{
 	border-right: 2px #222 solid;
 }
-.ismobile .thumbnail:not(.selected) div.hover-state, .thumbnail:not(.selected):hover div.hover-state{
+.thumbnail:not(.selected):hover div.hover-state{
 	bottom:0;
 }
 .thumbnail:not(.selected):hover p:hover{
@@ -388,6 +394,10 @@ video{
 	border-radius: 10px;
 }
 
+.ios .play-controls a{
+	display: none;
+}
+
 /*smaller than 768*/
 @media (max-width: 768px) {
 	#ball{
@@ -461,6 +471,9 @@ video{
 		line-height: 30px;
 		font-size: 10px;
 		letter-spacing: .05em;
+	}
+	.touch .thumbnail{
+		padding-bottom:30px;
 	}
 	#edit-video-nav-container p {
 		font-size: 10px;
