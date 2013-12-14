@@ -122,7 +122,7 @@ main.toEditVideoMode = function(){
 main.initVideoPreviewMode = function(){
 	//main.scrollToPreview();
 
-	$("#build").fadeOut(400,function(){
+	$("#build").fadeTo(400,0,function(){
 		main.getCombinedVideo();
 	});
 }
