@@ -116,17 +116,16 @@ main.getCombinedVideo = function(){
         data: {"selections":JSON.stringify(selections)},
         dataType: "json",
         success: function (response) {
-        	console.log(response);
-       //      if(response.status == "success"){
-       //      	console.log("success : " + response.video);
+            if(response.status == "success"){
+            	console.log("success : " + response.video);
 
-       //      	$("#preview-video-source").attr('src', response.video);
-			    // $("#preview-video").load();
+            	$("#preview-video-source").attr('src', response.video);
+			    $("#preview-video").load();
 
-			    // main.onVideoPreviewModeComplete();
-       //      }else{
-       //      	console.log("ffmpeg video error: " + response.error);
-       //      }
+			    main.onVideoPreviewModeComplete();
+            }else{
+            	console.log("ffmpeg video error: " + response.error);
+            }
         },
         error:function(error){
         	console.log("server video error");
