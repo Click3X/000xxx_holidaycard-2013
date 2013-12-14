@@ -327,16 +327,15 @@ video{
 	text-align: center;
 }
 #build button{
-	font-size: 24px;
+	font-size: 20px;
 	font-family: 'Gotham-Bold', sans-serif !important;
-	color: #444;
+	color: #000;
 	background-color: #FFF;
 	padding: 13px 14px 10px 14px;
-	border-radius: 4px;
 }
 #build button:hover{
-	background-color: #DDD;
-	color: #555;
+	background-color: #333;
+	color: #DD0000;
 }
 #build button span{
 	margin-left: 10px;
