@@ -334,8 +334,12 @@ video{
 	padding: 13px 14px 10px 14px;
 }
 #build button:hover{
-	background-color: #333;
-	color: #DD0000;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, .7);
+	background-color: #AA0000;
+	border:rgba(25, 25, 25, 1) solid 6px;
+	color: #FFF;
+	border-radius: 6px;
+	margin: -6px;
 }
 #build button span{
 	margin-left: 10px;
@@ -351,6 +355,32 @@ video{
 	border-radius: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+}
+
+.play-controls{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin-left:-165px;
+	margin-top:-30px;
+}
+
+.play-controls a.glyphicon-play{
+	color:rgba(150,20,20,.7);
+	background:none;
+	display: inline;	
+	font-size: 140px;
+	text-decoration: none !important;
+	cursor: pointer;
+	padding:60px 90px 60px 100px;
+	text-align: left;
+	
+}
+.play-controls a.glyphicon-play:hover{
+	background:rgba(150,20,20,.7);
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, .7);
+	color: #FFF;
+	border-radius: 10px;
 }
 
 /*smaller than 768*/

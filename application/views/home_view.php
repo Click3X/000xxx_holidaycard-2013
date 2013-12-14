@@ -104,8 +104,11 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             <div id="preview" class="row section">
               <div class="col-md-8 col-md-offset-2">
                 <h4>Nice job. Now share it!</h4>
-                <video id="preview-video" controls width="600" height="auto" poster="img/thumbnails/600/1_0.jpg">
-                  <source id="preview-video-source"  src="" type='video/mp4' />
+                <div class="play-controls">
+                  <a class="glyphicon glyphicon-play"></a>
+                </div>
+                <video width="600" height="auto" poster="img/thumbnails/600/preview.jpg">
+                  <source src="mp4/1_0.mp4" type='video/mp4' />
                 </video>
               </div>
               <div class="col-md-8 col-md-offset-2">
@@ -120,8 +123,8 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <video controls width="600" height="auto" poster="img/thumbnails/600/1_0.jpg">
-                      <source src="" type='video/mp4' />
+                    <video controls width="600" height="auto" poster="">
+                      <source src="mp4s/1_0.mp4" type='video/mp4' />
                     </video>
                   </div>
                 </div>
