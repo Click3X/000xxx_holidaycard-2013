@@ -9,6 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="user-scalable=no,width=device-width,maximum-scale=1.0" />
         
         <style>
             body {
