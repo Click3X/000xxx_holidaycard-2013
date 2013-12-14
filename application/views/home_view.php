@@ -30,8 +30,6 @@
           categories.push("<?=$id;?>");
         <? endforeach; ?>
 
-        console.log(categories_list["0"]);
-
         </script>
     </head>
     <body>
@@ -52,7 +50,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 <img id="arrow" src="<?= base_url(); ?>img/up_arrow.jpg" />
                 <ul id="category-nav" class="nav nav-tabs">
                   <?php $index = 0; foreach ( config_item("category_list") as $id=>$num_videos ): ?>
-                  <li><a data-id="<?= $id;?>" data-index="<?= $index;?>" href="#video-category-<?= $id;?>"><?= $id;?></a></li>
+                  <li data-id="<?= $id;?>"><a data-id="<?= $id;?>" data-index="<?= $index;?>" href="#video-category-<?= $id;?>"><?= $id;?></a></li>
                   <?php $index++; endforeach; ?>
                 </ul>
               </div>
@@ -86,39 +84,35 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             </div>
             <div id="edit-video" class="row section">
               <div class="col-md-10 col-md-offset-1">
-                <h4>Edit your video.</h4>
+                <h4>Edit your timeline.</h4>
                 <div id="edit-video-nav-container">
                   <p class="pull-left">start</p>
                   <ul id="edit-video-nav"><!--
                       <?php foreach ( config_item("category_list") as $id=>$num_videos ): ?>
-                      --><li data-id="<?= $id;?>"><span><h1><?= $id;?></h1></span><a></a></li><!--
+                      --><li data-id="<?= $id;?>"><span><h1><?= $id;?></h1></span><a data-id="<?= $id;?>" href="#video-category-<?= $id;?>"></a></li><!--
                       <?php endforeach; ?>
                   --></ul>
                   <p class="pull-right">end</p>
                 </div>
               </div>
             </div>
-            <div id="preview" class="row section">
-              <div class="col-md-8 col-md-offset-2">
-                <h4>Preview your video.</h4>
-                <video id="preview-video" controls width="600" height="auto" poster="img/thumbnails/600/1_0.jpg">
-                  <source id="preview-video-source"  src="" type='video/mp4' />
-                </video>
+            <div id="build" class="row section">
+              <div class="col-md-12">
+                <button type="button" class="btn btn-default">Build it<span class="glyphicon glyphicon-film"></span></button>
               </div>
             </div>
             <div id="preview" class="row section">
               <div class="col-md-8 col-md-offset-2">
                 <h4>Nice job. Now share it!</h4>
+                <video id="preview-video" controls width="600" height="auto" poster="img/thumbnails/600/1_0.jpg">
+                  <source id="preview-video-source"  src="" type='video/mp4' />
+                </video>
+              </div>
+              <div class="col-md-8 col-md-offset-2">
                 <ul id="share-nav"><!--
                 --><li id="facebook"></li><!--
                 --><li id="twitter"></li><!--
               --></ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div id="footer">
-                </div>
               </div>
             </div>
             <!-- Modal -->
@@ -134,7 +128,6 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
               </div>
             </div>
         </div>
-
 
         <script src="<?php echo base_url(); ?>js/jquery-1.9.1.min.js"></script>    
         <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>

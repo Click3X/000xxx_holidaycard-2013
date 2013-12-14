@@ -22,14 +22,17 @@ class Encoder extends CI_Controller {
 		echo "Call the combine method to concatenate your videos.";
 	}
 
-	public function combine($two = "0",$zero = "0",$one = "0",$four = "0"){
+	public function combine(){
+		$post = $this->input->post();
+		$selections = $post["selections"];
+
 		$files = array();
 
 		//write the file names to txt file
-		$files[0] = "'".base_url()."mp4/2_".$two.".mp4'";
-		$files[1] = "'".base_url()."mp4/0_".$zero.".mp4'";
-		$files[2] = "'".base_url()."mp4/1_".$one.".mp4'";
-		$files[3] = "'".base_url()."mp4/4_".$four.".mp4'";
+		$files[0] = "'".base_url()."mp4/2_".$selections[0].".mp4'";
+		$files[1] = "'".base_url()."mp4/0_".$selections[1].".mp4'";
+		$files[2] = "'".base_url()."mp4/1_".$selections[2].".mp4'";
+		$files[3] = "'".base_url()."mp4/4_".$selections[3].".mp4'";
 
 		$sources = "file ".implode("\nfile ", $files);
 		$filelist = FCPATH."filelist.txt";
