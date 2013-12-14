@@ -98,7 +98,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             </div>
             <div id="build" class="row section">
               <div class="col-md-12">
-                <button type="button" class="btn btn-default">Build it<span class="glyphicon glyphicon-film"></span></button>
+                <button type="button" class="btn btn-default">Create Video<span class="glyphicon glyphicon-film"></span></button>
               </div>
             </div>
             <div id="preview" class="row section">
