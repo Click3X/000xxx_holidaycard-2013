@@ -104,27 +104,22 @@ main.firstMissingCategory = function(){
 	return categories[selections.indexOf("none")];
 }
 
-main.showPreview = function(){
-
-}
-
-main.hidePreview = function(){
-
-}
-
 main.checkComplete = function(){
 	return selections.indexOf("none") == -1 ? true : false;
 }
 
 main.toEditVideoMode = function(){
-	main.scrollToEditor();
-	$("#build").fadeIn();
+	console.log("toEditMode");
+
+	$("#preview").fadeOut(200, function(){
+		$("#build").fadeTo(200, 1, function(){
+			main.scrollToEditor();
+		});
+	});
 }
 
 main.initVideoPreviewMode = function(){
-	//main.scrollToPreview();
-
-	$("#build").fadeTo(400,0,function(){
+	$("#build").fadeTo(300,0,function(){
 		main.getCombinedVideo();
 	});
 }
@@ -151,9 +146,14 @@ main.getCombinedVideo = function(){
         	console.log("server video error");
         }
     });
+    
+	//local testing;
+	//main.onVideoPreviewReady();
 }
 
 main.onVideoPreviewReady = function(){
+	$("#build").fadeOut(0);
+
 	$("#preview").fadeIn(300, function(){
 		main.scrollToPreview();
 	});
