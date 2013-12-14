@@ -39,7 +39,7 @@ class Encoder extends CI_Controller {
 		$savefile = file_put_contents($filelist, $sources);
 
 		//build the ffmpeg command and exec
-		$outputfile_previx = $two.$zero.$one.$four;
+		$outputfile_previx = $selections[0].$selections[1].$selections[2].$selections[3];
 		$outputfilename = $outputfile_previx."_".time()."_.mp4";
 		$audio = FCPATH."mp4/audio.mp4";
 		$tmppath = FCPATH."tmp/".$outputfilename;
