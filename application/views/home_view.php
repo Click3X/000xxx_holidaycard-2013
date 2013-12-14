@@ -72,7 +72,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                               <p class="preview-btn">preview</p><!--
                               --><p class="add-btn">Add</p>
                             </div>
-                            <img data-src="img/thumbnails/300/<?= $id; ?>_<?= $i; ?>.jpg" alt="<?= $id;?> Video <?= $i;?>" src="img/thumbnails/300/<?= $id; ?>_<?= $i; ?>.jpg">
+                            <img width="300" height="300" data-src="img/thumbnails/300/<?= $id; ?>_<?= $i; ?>.jpg" alt="<?= $id;?> Video <?= $i;?>" src="img/thumbnails/300/<?= $id; ?>_<?= $i; ?>.jpg">
                           </div>
                         </div>
                         <?php endfor; ?>

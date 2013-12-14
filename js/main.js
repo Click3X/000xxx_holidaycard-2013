@@ -171,7 +171,7 @@ main.showCategory = function( _category_id ){
 	current_category.id = _category_id;
 	current_category.index = categories.indexOf(_category_id);
 
-	
+	preview_video.get(0).pause();
 
 	//first scroll to top
 	setTimeout(function(){
