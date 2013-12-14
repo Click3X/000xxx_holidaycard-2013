@@ -9,8 +9,8 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <meta name="viewport" content="user-scalable=no,width=device-width,maximum-scale=1.0" />
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/><!--320-->
+
         <style>
             body {
                 padding-bottom: 30px;
