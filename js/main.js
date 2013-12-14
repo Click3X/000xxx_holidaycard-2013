@@ -120,7 +120,7 @@ main.toEditVideoMode = function(){
 }
 
 main.initVideoPreviewMode = function(){
-	main.scrollToPreview();
+	//main.scrollToPreview();
 
 	$("#build").fadeOut(400,function(){
 		main.getCombinedVideo();
@@ -140,7 +140,7 @@ main.getCombinedVideo = function(){
             	$("#preview-video-source").attr('src', response.video);
 			    $("#preview-video").load();
 
-			    main.onVideoPreviewModeComplete();
+			    main.onVideoPreviewReady();
             }else{
             	console.log("ffmpeg video error: " + response.error);
             }
@@ -151,8 +151,8 @@ main.getCombinedVideo = function(){
     });
 }
 
-main.onVideoPreviewModeComplete = function(){
-	$("#preview").fadeIn();
+main.onVideoPreviewReady = function(){
+	main.scrollToPreview();
 }
 
 main.showCategory = function( _category_id ){
@@ -179,8 +179,8 @@ main.scrollToEditor = function(){
 }
 
 main.scrollToPreview = function(){
-	var editorTop = $("#preview-video").offset().top-30;
-	$("body").animate({scrollTop:editorTop});
+	var previewTop = $("#preview").offset().top-30;
+	$("body").animate({scrollTop:previewTop});
 }
 
 main.videoChanged = function( $category, $thumb_id ){
