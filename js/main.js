@@ -78,8 +78,6 @@ main.initSettings = function(){
 			$("html").addClass("ios7");
 		}
 	}
-
-	alert(main.settings.mobile);
 }
 
 main.playPreviewVideo = function(){
