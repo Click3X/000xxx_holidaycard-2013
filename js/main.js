@@ -155,7 +155,7 @@ main.onVideoPreviewReady = function(){
 	$("#preview").fadeIn(300, function(){
 		main.scrollToPreview();
 	});
-});
+}
 
 main.showCategory = function( _category_id ){
 	current_category.id = _category_id;
