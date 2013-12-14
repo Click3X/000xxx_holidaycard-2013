@@ -9,12 +9,14 @@ var selections = [];
 var current_category = {id:null,index:null};
 
 var preview_video;
+var preview_video_source;
 var preview_video_controls;
 
 jQuery( function($){
 	console.log(categories);
 
 	preview_video = $("#preview video");
+	preview_video_source = $("#preview video source");
 	preview_video_controls = $("#preview div.play-controls");
 
 	$.each(categories, function(i,v){
@@ -137,8 +139,8 @@ main.getCombinedVideo = function(){
             if(response.status == "success"){
             	console.log("success : " + response.video);
 
-            	$("#preview-video-source").attr('src', response.video);
-			    $("#preview-video").load();
+            	preview_video_source.attr('src', response.video);
+			    preview_video.load();
 
 			    main.onVideoPreviewReady();
             }else{

@@ -124,7 +124,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 <div class="modal-content">
                   <div class="modal-body">
                     <video controls width="600" height="auto" poster="">
-                      <source src="mp4s/1_0.mp4" type='video/mp4' />
+                      <source src="" type='video/mp4' />
                     </video>
                   </div>
                 </div>
