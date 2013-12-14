@@ -175,7 +175,7 @@ main.videoChanged = function( $category, $thumb_id ){
 	if(!_li.hasClass("selected"))
 		_li.addClass("selected");
 
-	_span.css( "background-image", "url(../img/overlay_bg.png), url(" + paths.selected_thumbs + _filename + ")" );
+	_span.css( "background-image", "url("+base_url+"img/overlay_bg.png), url(" + base_url + paths.selected_thumbs + _filename + ")" );
 }
 
 
