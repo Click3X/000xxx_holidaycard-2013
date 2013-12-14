@@ -32,9 +32,9 @@ main.playPreviewVideo = function(){
 	});
 }
 
-main.positionCaret = function(){
+main.positionCaret = function( _callback ){
 	var pos = $("#category-nav li[data-id="+current_category.id+"]").position().left;
-	$("#nav-container img#arrow").css("left",pos+10);
+	$("#nav-container img#arrow").animate( {"left":pos+10},300,"swing", _callback ? _callback(): null );
 }
 
 main.addEventListeners = function(){
@@ -171,28 +171,58 @@ main.showCategory = function( _category_id ){
 	current_category.id = _category_id;
 	current_category.index = categories.indexOf(_category_id);
 
-	$('#category-nav li a[data-id='+ current_category.id +']' ).tab('show');
+	
 
-	main.scrollToChooseVideos();
-	main.positionCaret();
+	//first scroll to top
+	setTimeout(function(){
+		main.scrollToChooseVideos(function(){
+			console.log("scroll complete");
+
+			//starting position of tab-pane
+			$('#video-category-'+ current_category.id).css({left:"100px"});
+
+			//show the tab-pane and move caret
+			$('#video-category-'+ current_category.id).animate({left:"0"});
+			$('#category-nav li a[data-id='+ current_category.id +']' ).tab('show');
+
+			//move the caret
+			main.positionCaret();
+
+			//transition in thumbs
+			var i = 0;
+			$('#video-category-'+ current_category.id + " .col-xs-6").each(function(){
+				var t = $(this);
+				var rand = 200+ (Math.random()*500);
+
+				//set starting positions
+				t.css({"opacity":"0","left":(i*50)-rand + "px"});
+
+				//animate in
+				t.delay(i*50).animate({"opacity":"1","left":"0px"});
+				i++;
+			});
+		});
+	},300);
 }
 
-main.scrollToChooseVideos = function(){
+main.scrollToChooseVideos = function( _callback ){
 	var editorTop = $("#choose-videos-header").offset().top;
 
 	if( $("body").scrollTop() > editorTop){
-		$("body").animate({scrollTop:editorTop});
+		$("body").animate( {scrollTop:editorTop},300,"swing",_callback ? _callback(): null );
+	} else {
+		_callback ? _callback(): null;
 	}
 }
 
-main.scrollToEditor = function(){
+main.scrollToEditor = function( _callback ){
 	var editorTop = $("#edit-video").offset().top-30;
-	$("body").animate({scrollTop:editorTop});
+	$("body").animate({scrollTop:editorTop},300,"swing",_callback ? _callback(): null );
 }
 
-main.scrollToPreview = function(){
+main.scrollToPreview = function( _callback ){
 	var previewTop = $("#preview").offset().top-30;
-	$("body").animate({scrollTop:previewTop});
+	$("body").animate({scrollTop:previewTop},300,"swing",_callback ? _callback(): null );
 }
 
 main.videoChanged = function( $category, $thumb_id ){

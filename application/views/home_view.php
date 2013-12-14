@@ -62,8 +62,8 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
             <div id="pick-videos" class="row">
               <div class="col-md-12">
                 <div class="tab-content">
-                  <?php foreach ( config_item("category_list") as $id=>$num_videos ): ?>
-                    <div id="video-category-<?= $id; ?>" data-video-category="<?= $id; ?>" class="tab-pane fade">
+                  <?php $index = 0; foreach ( config_item("category_list") as $id=>$num_videos ): ?>
+                    <div id="video-category-<?= $id; ?>" data-video-category="<?= $id; ?>" class="tab-pane fade <?= $index == 0 ? 'active' : ''; ?>">
                       <div class="row">
                         <?php for($i = 0; $i < intval($num_videos); $i++ ): ?>
                         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
@@ -78,7 +78,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                         <?php endfor; ?>
                       </div>
                     </div>
-                  <?php endforeach; ?>
+                  <?php $index++; endforeach; ?>
                  </div>
               </div>
             </div>
