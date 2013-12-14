@@ -363,6 +363,7 @@ video{
 	left: 50%;
 	margin-left:-165px;
 	margin-top:-30px;
+	z-index: 2;
 }
 
 .play-controls a.glyphicon-play{

@@ -9,14 +9,12 @@ var selections = [];
 var current_category = {id:null,index:null};
 
 var preview_video;
-var preview_video_source;
 var preview_video_controls;
 
 jQuery( function($){
 	console.log(categories);
 
 	preview_video = $("#preview video");
-	preview_video_source = $("#preview video source");
 	preview_video_controls = $("#preview div.play-controls");
 
 	$.each(categories, function(i,v){
@@ -112,10 +110,18 @@ main.toEditVideoMode = function(){
 	console.log("toEditMode");
 
 	$("#preview").fadeOut(200, function(){
+		main.resetPreviewVideo();
+
 		$("#build").fadeTo(200, 1, function(){
 			main.scrollToEditor();
 		});
 	});
+}
+
+main.resetPreviewVideo = function(){
+	preview_video.attr("src","");
+	preview_video.removeAttr("controls");
+	preview_video_controls.fadeIn(0);
 }
 
 main.initVideoPreviewMode = function(){
@@ -134,7 +140,7 @@ main.getCombinedVideo = function(){
             if(response.status == "success"){
             	console.log("success : " + response.video);
 
-            	preview_video_source.attr('src', response.video);
+            	preview_video.attr('src', response.video);
 			    preview_video.load();
 
 			    main.onVideoPreviewReady();
@@ -146,9 +152,11 @@ main.getCombinedVideo = function(){
         	console.log("server video error");
         }
     });
-    
+
 	//local testing;
-	//main.onVideoPreviewReady();
+	// preview_video.attr('src', "mp4/1_0.mp4");
+	// preview_video.load();
+	// main.onVideoPreviewReady();
 }
 
 main.onVideoPreviewReady = function(){
