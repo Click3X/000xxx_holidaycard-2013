@@ -125,7 +125,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 <div class="modal-content">
                   <div class="modal-body">
                     <a class="modal-close glyphicon glyphicon-remove" class="glyphicon glyphicon-remove"></a>
-                    <video controls width="600" height="600" poster="">
+                    <video autoplay controls width="600" height="600" poster="">
                       <!-- <source src="" type='video/mp4' /> -->
                     </video>
                   </div>
