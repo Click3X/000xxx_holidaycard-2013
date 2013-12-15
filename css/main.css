@@ -42,11 +42,10 @@ p{
 	color:#FFF;
 }
 video{
-	width: 100%;
-	height: inherit;
+	max-width: 100%;
+	height: auto;
 	border: 8px solid rgba(0,0,0,.4);
 	border-radius: 4px;
-	max-width: 600px;
 }
 #ball{
 	position: absolute;
