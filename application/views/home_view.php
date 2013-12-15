@@ -108,7 +108,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 <div class="play-controls">
                   <a class="glyphicon glyphicon-play"></a>
                 </div>
-                <video width="600" height="600" poster="">
+                <video width="600" height="600" poster="<?=base_url();?>img/thumbnails/600/preview.jpg">
                   <!-- <source src="" type='video/mp4' /> -->
                 </video>
               </div>
