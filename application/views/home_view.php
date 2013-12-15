@@ -2,11 +2,11 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js touch ios"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Happy Holidays from Click 3X</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/><!--320-->
@@ -124,6 +124,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body">
+                    <a class="modal-close glyphicon glyphicon-remove" class="glyphicon glyphicon-remove"></a>
                     <video controls width="600" height="600" poster="">
                       <!-- <source src="" type='video/mp4' /> -->
                     </video>

@@ -43,7 +43,7 @@ p{
 }
 video{
 	width: 100%;
-	/*height: auto;*/
+	height: auto;
 	border: 8px solid rgba(0,0,0,.4);
 	border-radius: 4px;
 	max-width: 600px;
@@ -233,9 +233,10 @@ video{
 }
 
 .thumbnail{
+	background:none !important;
 	padding: 0;
 	position: relative;
-	border-radius: 0;
+	border-radius: 0 !important;
 	border:none;
 	margin-bottom: 10px;
 	overflow: hidden;
@@ -303,9 +304,34 @@ video{
 }
 .modal-dialog {
 	width: 90%;
+	padding:18px 8px 8px 8px;
+	margin-top:10px;
 }
 .modal-body {
+	max-width: 600px;
+	padding:0px !important;
 	padding:10px;
+}
+.modal-content{
+	position: relative;
+	padding:0px !important;
+	border:0;
+	margin: auto;
+	max-width: 600px;
+}
+.modal-close{
+	text-decoration: none !important;
+	font-size: 20px;
+	background: #FFF;
+	color: #000;
+	position: absolute;
+	right:8px;
+	top:-16px;
+	cursor: pointer;
+}
+.modal-close:hover{
+	color: #FFF;
+	background: #DD0000;
 }
 #header{
 	border-bottom: 3px solid #333;
