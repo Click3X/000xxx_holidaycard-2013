@@ -108,7 +108,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 <div class="play-controls">
                   <a class="glyphicon glyphicon-play"></a>
                 </div>
-                <video width="600" poster="">
+                <video poster="">
                   <!-- <source src="" type='video/mp4' /> -->
                 </video>
               </div>
@@ -125,7 +125,7 @@ Nullam vulptate arcu sit amet hendrerit vestibulum. Ut nec mallis am corper. Don
                 <div class="modal-content">
                   <div class="modal-body">
                     <a class="modal-close glyphicon glyphicon-remove" class="glyphicon glyphicon-remove"></a>
-                    <video controls width="600" poster="">
+                    <video controls poster="">
                       <!-- <source src="" type='video/mp4' /> -->
                     </video>
                   </div>
