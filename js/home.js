@@ -92,7 +92,7 @@ events.onPreviewThumbClicked = function( e ){
 	var _thumb 		= $(this).parent().parent(),
 	_thumb_id		= _thumb.attr("data-id"),
 	_category 		= _thumb.attr("data-video-category"),
-	_category_index = categories.indexOf(_category);
+	_category_index = $.inArray(_category,categories);
 
 	modal_video.attr("src", base_url + paths.videos + _category + "_" + _thumb_id + ".mp4" );
 	modal_video.attr("poster", base_url + paths.posters + _category + "_" + _thumb_id + ".jpg" );
