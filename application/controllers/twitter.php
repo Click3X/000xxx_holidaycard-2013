@@ -26,7 +26,7 @@ class Twitter extends CI_Controller {
 	{		
 		$link = base_url(). "home/video". urldecode($_link);
 
-		header( 'Location: https://twitter.com/intent/tweet?source=webclient&text='.$_status  ) ;
+		header( 'Location: https://twitter.com/intent/tweet?source=webclient&text='.$_status.'%20'.$link  ) ;
 	}
 
 	public function getbitly($long_url){
