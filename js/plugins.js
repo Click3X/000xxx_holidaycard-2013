@@ -88,7 +88,7 @@
             _caption        = "holidays.click3x.com",
             _description    = header_text,
             _link           = base_url + "home/video?data=" + JSON.stringify(sel),
-            _picture        = base_url + "img/thumbnails/200/1_0.jpg"
+            _picture        = base_url + "img/thumbnails/200/0_" + selections[0] + ".jpg"
 
             FB.ui({
                method: 'feed',
@@ -112,7 +112,7 @@
             $.each(selections,function(i,v){
                 _selections.push(parseInt(v));
             });
-            
+
             var sel = {selections:_selections};
 
             var _route      = base_url + "twitter/share",
