@@ -127,8 +127,8 @@ video{
 	position: absolute;
 	top:50%;
 	left: 50%;
-	margin-left: -155px;
-	margin-top: -30px;
+	margin-left: -148px;
+	margin-top: -49px;
 	z-index: 2;
 }
 
@@ -151,6 +151,16 @@ video{
 
 .ios .play-controls a{
 	display: none;
+}
+
+
+/*bigger than 768px*/
+
+@media (min-width: 768px) {
+	video{
+		width: 600px;
+		height: 600px;
+	}
 }
 
 /*smaller than 768*/
@@ -216,14 +226,5 @@ video{
 	}
 }
 
-@media (min-width: 768px) {
-	video{
-		width: 600px;
-		height: 600px;
-	}
-}
 
-/*bigger than 960*/
-@media (min-width: 960px) {
-	
-}
+
