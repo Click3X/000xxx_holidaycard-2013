@@ -127,8 +127,8 @@ video{
 	position: absolute;
 	top:50%;
 	left: 50%;
-	margin-left:-155px;
-	margin-top:-30px;
+	margin-left: -155px;
+	margin-top: -30px;
 	z-index: 2;
 }
 
@@ -139,7 +139,7 @@ video{
 	font-size: 140px;
 	text-decoration: none !important;
 	cursor: pointer;
-	padding:60px 65px 60px 85px;
+	padding: 60px 65px 60px 85px;
 	text-align: left;
 	border-radius: 200px;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
@@ -169,6 +169,13 @@ video{
 
 /*smaller than 480*/
 @media (max-width: 480px) {
+	.play-controls{
+		margin-left:-94px;
+		margin-top:-59px;
+	}
+	.play-controls a.glyphicon-play{
+		padding:10px 15px 10px 33px;
+	}
 	#ball{
 		top:-140px;
 	}
