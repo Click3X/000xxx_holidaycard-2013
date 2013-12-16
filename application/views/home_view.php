@@ -1,7 +1,7 @@
 <?php 
   $data = array(
     "page_id" => "home",
-    "header_text" => "Pick a clip for each number to create a custom 2014 video!"
+    "header_text" => "Pick a clip for each number to create a custom 2014 video. Then share it!"
   );
 ?>
 
