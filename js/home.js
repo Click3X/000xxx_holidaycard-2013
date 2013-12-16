@@ -107,7 +107,7 @@ events.onAddClicked = function( e ){
 	var _thumb 		= $(this).parent().parent(),
 	_thumb_id		= _thumb.attr("data-id"),
 	_category 		= _thumb.attr("data-video-category"),
-	_category_index = categories.indexOf(_category);
+	_category_index = $.inArray(_category,categories);
 
 	if( selections[ _category_index ] != _thumb_id ){
 		selections[ _category_index ] = _thumb_id;
@@ -131,7 +131,7 @@ main.onRemoveClicked = function( e ){
 
 	var _a 			= $(this).parent(),
 	_category_id	= _a.attr("data-id"),
-	_category_index = categories.indexOf(_category_id);
+	_category_index = $.inArray(_category_id,categories);
 
 	selections[ _category_index ] = "none";
 	main.videoChanged(_category_id);
@@ -149,11 +149,11 @@ main.nextCategory = function(){
 }
 
 main.firstMissingCategory = function(){	
-	return categories[selections.indexOf("none")];
+	return categories[ $.inArray("none",selections) ];
 }
 
 main.checkComplete = function(){
-	return selections.indexOf("none") == -1 ? true : false;
+	return $.inArray("none",selections) == -1 ? true : false;
 }
 
 main.toEditVideoMode = function(){
@@ -219,7 +219,7 @@ main.onVideoPreviewReady = function(){
 
 main.showCategory = function( _category_id ){
 	current_category.id = _category_id;
-	current_category.index = categories.indexOf(_category_id);
+	current_category.index = $.inArray(_category_id,categories);
 
 	preview_video.get(0).pause();
 
