@@ -1,3 +1,16 @@
+(function() {
+    if (!Array.prototype.indexOf) {
+        Array.prototype.indexOf = function(obj, start) {
+            for (var i = (start || 0), j = this.length; i < j; i++) {
+                if (this[i] === obj) { return i; }
+            }
+            return -1;
+        }
+    } else {
+        console.log("Array.indexOf already exists.");
+    }
+}());
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
