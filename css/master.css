@@ -153,16 +153,6 @@ video{
 	display: none;
 }
 
-
-/*bigger than 768px*/
-
-@media (min-width: 768px) {
-	video{
-		width: 600px;
-		height: 600px;
-	}
-}
-
 /*smaller than 768*/
 @media (max-width: 768px) {
 	#ball{
