@@ -29,10 +29,12 @@ class Encoder extends CI_Controller {
 		$files = array();
 
 		//write the file names to txt file
-		$files[0] = "'".base_url()."mp4/2_".$selections[0].".mp4'";
-		$files[1] = "'".base_url()."mp4/0_".$selections[1].".mp4'";
-		$files[2] = "'".base_url()."mp4/1_".$selections[2].".mp4'";
-		$files[3] = "'".base_url()."mp4/4_".$selections[3].".mp4'";
+		$files[0] = "'".base_url()."mp4/intro.mp4'";
+		$files[1] = "'".base_url()."mp4/2_".$selections[0].".mp4'";
+		$files[2] = "'".base_url()."mp4/0_".$selections[1].".mp4'";
+		$files[3] = "'".base_url()."mp4/1_".$selections[2].".mp4'";
+		$files[4] = "'".base_url()."mp4/4_".$selections[3].".mp4'";
+		$files[5] = "'".base_url()."mp4/outro.mp4'";
 
 		$sources 	= "file ".implode("\nfile ", $files);
 		$filelist 	= FCPATH."filelist.txt";
