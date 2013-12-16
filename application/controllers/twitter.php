@@ -24,9 +24,10 @@ class Twitter extends CI_Controller {
 
 	public function share($_status, $_link)
 	{		
-		$link = base_url(). "home/video". urldecode($_link);
+		$link 		= base_url(). "home/video". urldecode($_link);
+		$short_url 	= $this->getbitly($link);
 
-		header( 'Location: https://twitter.com/intent/tweet?source=webclient&text='.$_status.'%20'.$link  ) ;
+		header( 'Location: https://twitter.com/intent/tweet?source=webclient&text='.$_status.'%20'.$short_url  ) ;
 	}
 
 	public function getbitly($long_url){
