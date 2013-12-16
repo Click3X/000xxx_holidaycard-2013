@@ -88,7 +88,7 @@
             _caption        = "holidays.click3x.com",
             _description    = header_text,
             _link           = base_url + "home/video?data=" + JSON.stringify(sel),
-            _picture        = base_url + "img/thumbnails/200/0_" + _selections[0] + ".jpg"
+            _picture        = base_url + "img/thumbnails/200/2_" + _selections[0] + ".jpg"
 
             FB.ui({
                method: 'feed',
