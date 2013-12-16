@@ -81,8 +81,8 @@
       <!-- <source src="" type='video/mp4' /> -->
     </video>
   </div>
-  <div class="col-md-8 col-md-offset-2">
-    <h4>Looks great. Now share it!</h4>
+  <div class="col-md-8 col-md-offset-2 section">
+    <h4>Now share it!</h4>
     <ul id="share-nav"><!--
     --><li id="facebook-btn"></li><!--
     --><li id="twitter-btn"></li><!--
