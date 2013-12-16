@@ -34,42 +34,47 @@ class Encoder extends CI_Controller {
 		$files[2] = "'".base_url()."mp4/1_".$selections[2].".mp4'";
 		$files[3] = "'".base_url()."mp4/4_".$selections[3].".mp4'";
 
-		$sources = "file ".implode("\nfile ", $files);
-		$filelist = FCPATH."filelist.txt";
-		$savefile = file_put_contents($filelist, $sources);
+		$sources 	= "file ".implode("\nfile ", $files);
+		$filelist 	= FCPATH."filelist.txt";
+		$savefile 	= file_put_contents($filelist, $sources);
 
 		//build the ffmpeg command and exec
-		$outputfile_previx = $selections[0].$selections[1].$selections[2].$selections[3];
-		$outputfilename = $outputfile_previx."_".time()."_.mp4";
-		$audio = FCPATH."mp4/audio.mp4";
-		$tmppath = FCPATH."tmp/".$outputfilename;
-		$outputpath = FCPATH."output/".$outputfilename;
-		$output_http_location = base_url()."output/".$outputfilename;
-
-		$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$tmppath;
-		exec($command, $output, $result);
+		$outputfilename 		= implode("-", $selections).".mp4";
+		$audio 					= FCPATH."mp4/audio.mp4";
+		$tmppath 				= FCPATH."tmp/".$outputfilename;
+		$outputpath 			= FCPATH."output/".$outputfilename;
+		$output_http_location 	= base_url()."output/".$outputfilename;
 
 		$response = (object) "response";
 
-		if($result === 0){		
-			//if success on concat, add the audio.	
-			$command = "ffmpeg -i ".$audio." -i ".$tmppath." -c copy -map 0:a:0 -map 1:v:0 -shortest ".$outputpath;
-			exec($command, $output, $result);
+		//check if this combo already exists. if not build it.
+		if( file_exists($outputpath) ){
+			$response->status = "success";
+			$response->video = $output_http_location;
+		} else {
+			$command = "ffmpeg -f concat -i ".$filelist." -c copy ".$tmppath;
+			exec($command, $output, $result);			
 
-			if($result === 0){
-				$response->status = "success";
-				$response->video = $output_http_location;
+			if($result === 0){		
+				//if success on concat, add the audio.	
+				$command = "ffmpeg -i ".$audio." -i ".$tmppath." -c copy -map 0:a:0 -map 1:v:0 -shortest ".$outputpath;
+				exec($command, $output, $result);
+
+				if($result === 0){
+					$response->status = "success";
+					$response->video = $output_http_location;
+				}else{
+					$response->status = "failed";
+					$response->error = "failed to write final output file : ". $result;
+				}
+
+				//remove the tmp file
+				unlink($tmppath);
 			}else{
 				$response->status = "failed";
-				$response->error = "failed to write final output file : ". $result;
-			}
-
-			//remove the tmp file
-			unlink($tmppath);
-		}else{
-			$response->status = "failed";
-			$response->error = "failed to write tmp file : ". $result;
-		}		
+				$response->error = "failed to write tmp file : ". $result;
+			}	
+		}	
 
 		echo json_encode($response);
 	}

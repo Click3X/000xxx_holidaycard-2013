@@ -17,7 +17,7 @@ var modal_video;
 main.settings = {};
 
 jQuery( function($){
-	main.initSettings();
+	main.settings = $.initUserAgent();
 
 	preview_video 				= $("#preview video");
 	preview_video_controls 		= $("#preview div.play-controls");
@@ -30,56 +30,6 @@ jQuery( function($){
 	main.addEventListeners();
 	main.showCategory("2");
 });
-
-main.initSettings = function(){
-	main.settings.agent = navigator.userAgent;
-	main.settings.aspect_ratio = window.devicePixelRatio || 1;
-
-	if( main.settings.agent.match(/iPhone/i) || main.settings.agent.match(/iPod/i) ){
-		main.settings.iphone = true;
-		$("html").addClass("iphone");		
-	}else if( main.settings.agent.match(/iPad/i) ){
-		main.settings.ipad = true;
-		$("html").addClass("ipad");
-	}else if ( main.settings.agent.match(/Android/i) ){
-		main.settings.android = true;
-		$("html").addClass("android");
-	}else if( main.settings.agent.match(/Mac OS/i)){
-		main.settings.mac = true;
-		$("html").addClass("macos");
-	}else if( main.settings.agent.match(/Windows/i)){
-		main.settings.windows = true;
-		$("html").addClass("windowsos");
-	}
-
-	if( main.settings.agent.match(/Mobile/i) ){
-		main.settings.mobile = true;
-		$("html").addClass("mobile");
-	}
-
-	if(main.settings.iphone || main.settings.ipad){
-		main.settings.ios = true;
-
-		if( main.settings.aspect_ratio == 2 ){
-			main.settings.retina = true;
-			$("html").addClass("retina");
-		}
-
-		if( main.settings.agent.match(/4_/i) ){
-			main.settings.ios_version = 4;
-			$("html").addClass("ios4");
-		} else if( main.settings.agent.match(/5_/i) ){
-			main.settings.ios_version = 5;
-			$("html").addClass("ios5");
-		} else if( main.settings.agent.match(/6_/i) ){
-			main.settings.ios_version = 6;
-			$("html").addClass("ios6");
-		} else if( main.settings.agent.match(/7_/i) ){
-			main.settings.ios_version = 7;
-			$("html").addClass("ios7");
-		}
-	}
-}
 
 main.playPreviewVideo = function(){
 	preview_video_controls.fadeOut(300,function(){
@@ -111,7 +61,10 @@ main.addEventListeners = function(){
 		main.initVideoPreviewMode();
 	});
 
-	$('.play-controls a.glyphicon-play').click(function (e) {
+	$('#share-nav #facebook-btn').click($.shareOnFacebook);
+	$('#share-nav #twitter-btn').click($.shareOnTwitter);
+
+	$('.play-controls a.glyphicon-play').click( function(e){
 		e.preventDefault();
 		main.playPreviewVideo();
 	});

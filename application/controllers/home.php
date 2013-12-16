@@ -21,6 +21,15 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('home_view');
 	}
+
+	public function video(){
+		$get = $this->input->get();
+
+		$data = json_decode($get["data"]);
+
+		$filename = implode("-", $data->selections).".mp4";
+		$this->load->view("shared_video_view",array("selections"=>json_encode($data->selections),"filename"=>$filename));
+	}
 }
 
 /* End of file welcome.php */
