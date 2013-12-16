@@ -59,7 +59,7 @@ class Encoder extends CI_Controller {
 
 			if($result === 0){		
 				//if success on concat, add the audio.	
-				$command = "ffmpeg -i ".$audio." -i ".$tmppath." -c copy -map 0:a:0 -map 1:v:0 -shortest ".$outputpath;
+				$command = "ffmpeg -i ".$audio." -i ".$tmppath." -c copy -map 0:a:0 -map 1:v:0 ".$outputpath;
 				exec($command, $output, $result);
 
 				if($result === 0){
