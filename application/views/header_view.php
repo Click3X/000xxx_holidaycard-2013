@@ -48,7 +48,11 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div id="header">
             <h1>Happy Holidays</h1>
-            <p><img id="logo" src="<?= base_url(); ?>img/c3x_logo.png" /></p>
+            <p><img id="c3x_logo" class="logo" src="<?= base_url(); ?>img/c3x_logo.png" /></p>
+            <p>
+                <img id="cfm_logo" class="logo" src="<?= base_url(); ?>img/cfm_logo.png" />
+                <img id="r2b_logo" class="logo" src="<?= base_url(); ?>img/r2b_logo.png" />
+            </p>
             <p><?= $header_text; ?></p>
         </div>
 

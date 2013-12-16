@@ -48,8 +48,11 @@ p{
 	margin:0;
 	padding:0;
 }
-#header img#logo{
+/*#header img#logo{
 	padding-bottom: 6px;
+}*/
+#cfm_logo{
+	margin-right: 14px;
 }
 #header h1{
 	text-transform: uppercase;
@@ -65,7 +68,7 @@ p{
 	text-align: center;
 	margin:auto;
 	line-height: 26px;
-	padding: 0 10px;
+	padding: 4px 10px;
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
 }
 video{
