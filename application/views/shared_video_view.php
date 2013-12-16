@@ -5,13 +5,13 @@
   );
  ?>
 
+<? $this->load->view( "header_view",$data ); ?>
+
 <script type="text/javascript">
   var video_filename = "<?= $filename; ?>";
   var selections = JSON.parse("<?= $selections; ?>");
   var header_text = "<?= $data['header_text']; ?>";
 </script>
-
-<? $this->load->view( "header_view",$data ); ?>
 
 <div id="video_container" class="row">
   <div class="col-md-8 col-md-offset-2">

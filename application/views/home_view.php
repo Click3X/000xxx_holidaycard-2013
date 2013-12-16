@@ -5,6 +5,10 @@
   );
 ?>
 
+
+
+<? $this->load->view("header_view",$data); ?>
+
 <script type="text/javascript">
   var categories = [];
   <?php foreach(config_item('category_list') as $id=>$num_videos ): ?>
@@ -13,8 +17,6 @@
 
   var header_text = "<?= $data['header_text']; ?>";
 </script>
-
-<? $this->load->view("header_view",$data); ?>
 
 <div id="choose-videos-header" class="row">
   <h4>Start choosing videos.</h4>
