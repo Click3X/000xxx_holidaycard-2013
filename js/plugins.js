@@ -1,13 +1,16 @@
 (function() {
-    if (!Array.prototype.indexOf) {
-        console.log("adding Array.indexOf method");
+    if (!('indexOf' in Array.prototype)) {
+        console.log("Adding Array.indexOf");
 
-        Array.prototype.indexOf = function(obj, start) {
-            for (var i = (start || 0), j = this.length; i < j; i++) {
-                if (this[i] === obj) { return i; }
-            }
+        Array.prototype.indexOf= function(find, i /*opt*/) {
+            if (i===undefined) i= 0;
+            if (i<0) i+= this.length;
+            if (i<0) i= 0;
+            for (var n= this.length; i<n; i++)
+                if (i in this && this[i]===find)
+                    return i;
             return -1;
-        }
+        };
     } else {
         console.log("Array.indexOf already exists.");
     }
