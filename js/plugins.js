@@ -77,7 +77,12 @@
         },
 
         shareOnFacebook: function(e) {
-            var sel = {selections:selections};
+            var _selections = [];
+            $.each(selections,function(i,v){
+                _selections.push(parseInt(v));
+            });
+
+            var sel = {selections:_selections};
 
             var _name       = "Happy Holidays from Click 3X",
             _caption        = "holidays.click3x.com",
@@ -103,7 +108,12 @@
         },
 
         shareOnTwitter: function(e){
-            var sel = {selections:selections};
+            var _selections = [];
+            $.each(selections,function(i,v){
+                _selections.push(parseInt(v));
+            });
+            
+            var sel = {selections:_selections};
 
             var _route      = base_url + "twitter/share",
             _status         = "Happy Holidays from Click 3X. " + header_text,
