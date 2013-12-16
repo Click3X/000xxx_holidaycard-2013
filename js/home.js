@@ -28,7 +28,7 @@ jQuery( function($){
 	});
 
 	main.addEventListeners();
-	main.showCategory("2");
+	main.showCategory(categories[0]);
 });
 
 main.playPreviewVideo = function(){
@@ -52,12 +52,11 @@ main.addEventListeners = function(){
 		main.showCategory( $(this).attr("data-id") );
 	});
 
-	$('#edit-video-nav li a').click(function (e) {
-		e.preventDefault();
-		main.showCategory( $(this).attr("data-id") );
-	});
+	$('#edit-video-nav li a').click(main.onRemoveClicked);
 
-	$('#build button').click(function(){
+	$('#build a').click(function(e){
+		e.preventDefault();
+		
 		main.initVideoPreviewMode();
 	});
 
@@ -125,6 +124,18 @@ events.onAddClicked = function( e ){
 	} else {
 		console.log("video is already selected");
 	}
+}
+
+main.onRemoveClicked = function( e ){
+	e.preventDefault();
+
+	var _a 			= $(this).parent(),
+	_category_id	= _a.attr("data-id"),
+	_category_index = categories.indexOf(_category_id);
+
+	selections[ _category_index ] = "none";
+	main.videoChanged(_category_id);
+	main.showCategory(_category_id);
 }
 
 main.nextCategory = function(){
@@ -267,12 +278,20 @@ main.scrollToPreview = function( _callback ){
 main.videoChanged = function( $category, $thumb_id ){
 	console.log( "category " + $category + " changed to : " + $thumb_id );
 
-	var _filename = $category + "_" + $thumb_id + ".jpg";
 	var _li = $("#edit-video-nav li[data-id=" + $category + "]");
 	var _span = _li.children("span").eq(0);
 
-	if(!_li.hasClass("selected"))
-		_li.addClass("selected");
+	if($thumb_id != undefined){
+		var _filename = $category + "_" + $thumb_id + ".jpg";
 
-	_span.css( "background-image", "url("+base_url+"img/overlay_bg.png), url(" + base_url + paths.selected_thumbs + _filename + ")" );
+		if(!_li.hasClass("selected"))
+			_li.addClass("selected");
+
+		_span.css( "background-image", "url("+base_url+"img/overlay_bg.png), url(" + base_url + paths.selected_thumbs + _filename + ")" );
+	} else {
+		if(_li.hasClass("selected"))
+			_li.removeClass("selected");
+
+		_span.css( "background-image", "url('../img/gray_button_bg.jpg')" );
+	}
 }

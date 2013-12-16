@@ -57,7 +57,7 @@
       <p class="pull-left">start</p>
       <ul id="edit-video-nav"><!--
           <?php foreach ( config_item("category_list") as $id=>$num_videos ): ?>
-          --><li data-id="<?= $id;?>"><span><h1><?= $id;?></h1></span><a data-id="<?= $id;?>" href="#video-category-<?= $id;?>"></a></li><!--
+          --><li data-id="<?= $id;?>"><span><h1><?= $id;?></h1></span><a data-id="<?= $id;?>" class="glyphicon glyphicon-remove"></a></li><!--
           <?php endforeach; ?>
       --></ul>
       <p class="pull-right">end</p>
@@ -65,13 +65,15 @@
   </div>
 </div>
 <div id="build" class="row section">
-  <div class="col-md-12">
-    <button type="button" class="btn btn-default">Create Video<span class="glyphicon glyphicon-film"></span></button>
+  <h4>Nice job. Let's build it!</h4>
+  <div class="col-md-8 col-md-offset-2">
+    <img width="600" height="600" src="<?=base_url();?>img/thumbnails/600/preview.jpg" />
+    <a type="button" class="btn btn-default">Create Video<span class="glyphicon glyphicon-film"></span></a>
   </div>
 </div>
 <div id="preview" class="row section">
+  <h4>Your custom video is complete!</h4>
   <div class="col-md-8 col-md-offset-2">
-    <h4>Nice job. Now share it!</h4>
     <div class="play-controls">
       <a class="glyphicon glyphicon-play"></a>
     </div>
@@ -80,6 +82,7 @@
     </video>
   </div>
   <div class="col-md-8 col-md-offset-2">
+    <h4>Looks great. Now share it!</h4>
     <ul id="share-nav"><!--
     --><li id="facebook-btn"></li><!--
     --><li id="twitter-btn"></li><!--
