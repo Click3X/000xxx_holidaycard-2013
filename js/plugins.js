@@ -1,3 +1,7 @@
+function gaTrackEvent( _action, _label ){
+    ga('send', 'event', _action, 'click', _label);
+}
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
@@ -58,10 +62,6 @@
             return s;
         },
 
-        gaTrackEvent:function( _action, _label ){
-            ga('send', 'event', _action, 'click', _label);
-        },
-
         getVideoExtension: function(){
             var ext = "mp4";
             if(main.settings.firefox === true)
@@ -71,7 +71,7 @@
         },
 
         shareOnFacebook: function(e) {
-            $.gaTrackEvent("share","facebook");
+            gaTrackEvent("share","facebook");
 
             var _selections = [];
             $.each(selections,function(i,v){
@@ -104,7 +104,7 @@
         },
 
         shareOnTwitter: function(e){
-            $.gaTrackEvent("share","twitter");
+            gaTrackEvent("share","twitter");
 
             var _selections = [];
             $.each(selections,function(i,v){
