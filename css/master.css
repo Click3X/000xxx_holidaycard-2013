@@ -65,7 +65,6 @@ p{
 }
 #header p{
 	color: #CCC;
-	padding-top: 30px;
 	max-width: 700px;
 	display: block;
 	text-align: center;
@@ -73,6 +72,9 @@ p{
 	line-height: 26px;
 	padding: 4px 10px;
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
+}
+#header #header-text{
+	margin-top:10px;
 }
 video{
 	width:100%;

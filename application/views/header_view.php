@@ -53,7 +53,7 @@
                 <img id="cfm_logo" class="logo" src="<?= base_url(); ?>img/cfm_logo.png" />
                 <img id="r2b_logo" class="logo" src="<?= base_url(); ?>img/r2b_logo.png" />
             </p>
-            <p><?= $header_text; ?></p>
+            <p id="header-text"><?= $header_text; ?></p>
         </div>
 
         <div class="container">

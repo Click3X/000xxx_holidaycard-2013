@@ -28,7 +28,7 @@ class Twitter extends CI_Controller {
 		$short_url 	= $this->getbitly($link);
 		$status 	= "I just built a custom 2014 new year's video! Check it out, and create your own.";
 
-		header( 'Location: https://twitter.com/intent/tweet?source=webclient&text='.$_status.'%20'.$short_url  ) ;
+		header( 'Location: https://twitter.com/intent/tweet?source=webclient&text='.$status.'%20'.$short_url  ) ;
 	}
 
 	public function getbitly($long_url){

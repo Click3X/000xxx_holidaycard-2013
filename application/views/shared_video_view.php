@@ -1,7 +1,7 @@
 <?php 
   $data = array(
     "page_id" => "shared_video",
-    "header_text" => "Check out this customized video. Then share it, or customize your own!"
+    "header_text" => "Check out this awesome new year's 2014 video. Then share it, or customize your own!"
   );
  ?>
 
