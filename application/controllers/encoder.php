@@ -33,6 +33,8 @@ class Encoder extends CI_Controller {
 	}
 
 	public function combine(){
+		$this->load->library("image_builder");
+		
 		$post = $this->input->post();
 		$selections = json_decode($post["selections"]);
 
