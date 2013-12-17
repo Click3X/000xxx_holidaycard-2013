@@ -305,8 +305,8 @@ main.showCategory = function( _category_id ){
 main.scrollToChooseVideos = function( _callback ){
 	var editorTop = $("#choose-videos-header").offset().top;
 
-	if( $("body,html").scrollTop() > editorTop){
-		$("body,html").animate( {scrollTop:editorTop},300,"swing",_callback ? _callback(): null );
+	if( $(main.settings.webkit ? "body" : "html").scrollTop() > editorTop){
+		$(main.settings.webkit ? "body" : "html").animate( {scrollTop:editorTop},300,"swing",_callback ? _callback(): null );
 	} else {
 		_callback ? _callback(): null;
 	}
@@ -314,12 +314,12 @@ main.scrollToChooseVideos = function( _callback ){
 
 main.scrollToEditor = function( _callback ){
 	var editorTop = $("#edit-video").offset().top-30;
-	$("body,html").animate({scrollTop:editorTop},300,"swing",_callback ? _callback(): null );
+	$(main.settings.webkit ? "body" : "html").animate({scrollTop:editorTop},300,"swing",_callback ? _callback(): null );
 }
 
 main.scrollToPreview = function( _callback ){
 	var previewTop = $("#preview").offset().top-30;
-	$("body,html").animate({scrollTop:previewTop},300,"swing",_callback ? _callback(): null );
+	$(main.settings.webkit ? "body" : "html").animate({scrollTop:previewTop},300,"swing",_callback ? _callback(): null );
 }
 
 main.videoChanged = function( $category, $thumb_id ){

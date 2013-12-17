@@ -46,6 +46,8 @@
             s.ipad         = s.agent.indexOf("iPad") > -1;
             s.android      = s.agent.indexOf("Android") > -1;
 
+            s.webkit       = s.agent.indexOf("WebKit") > -1;
+
             if( (s.chrome) && (s.safari) ){
                 s.safari = false;
             }
@@ -82,6 +84,8 @@
             _link           = base_url + "home/video?data=" + JSON.stringify(sel),
             _picture        = current_fbimage;
 
+            var response = {};
+
             FB.ui({
                method: 'feed',
                name: _name,
@@ -92,9 +96,10 @@
               },
               function(_result) {
                 if(_result && _result.post_id){
-                  response.status = "success";
+                    response.id = _result.post_id;
+                    response.status = "success";
                 } else {
-                  response.status = "failed";
+                    response.status = "failed";
                 }
             });
         },
