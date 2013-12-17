@@ -24,25 +24,30 @@ class Encoder extends CI_Controller {
 
 	public function combine(){
 		$post = $this->input->post();
-		$selections = json_decode($post["selections"]);
+		$_selections = json_decode($post["selections"]);
 
+		$mp4 = $this->concatByExtension( $_selections, "mp4" );
+		$webm = $this->concatByExtension( $_selections, "webm" );
+	}
+
+	public function concatByExtension($selections, $ext = "mp4"){
 		$files = array();
 
 		//write the file names to txt file
-		$files[0] = "'".base_url()."mp4/intro.mp4'";
-		$files[1] = "'".base_url()."mp4/2_".$selections[0].".mp4'";
-		$files[2] = "'".base_url()."mp4/0_".$selections[1].".mp4'";
-		$files[3] = "'".base_url()."mp4/1_".$selections[2].".mp4'";
-		$files[4] = "'".base_url()."mp4/4_".$selections[3].".mp4'";
-		$files[5] = "'".base_url()."mp4/outro.mp4'";
+		$files[0] = "'".base_url().$ext."/intro.".$ext."'";
+		$files[1] = "'".base_url().$ext."/2_".$selections[0].".".$ext."'";
+		$files[2] = "'".base_url().$ext."/0_".$selections[1].".".$ext."'";
+		$files[3] = "'".base_url().$ext."/1_".$selections[2].".".$ext."'";
+		$files[4] = "'".base_url().$ext."/4_".$selections[3].".".$ext."'";
+		$files[5] = "'".base_url().$ext."/outro.".$ext."'";
 
 		$sources 	= "file ".implode("\nfile ", $files);
 		$filelist 	= FCPATH."filelist.txt";
 		$savefile 	= file_put_contents($filelist, $sources);
 
 		//build the ffmpeg command and exec
-		$outputfilename 		= implode("-", $selections).".mp4";
-		$audio 					= FCPATH."mp4/audio.mp4";
+		$outputfilename 		= implode("-", $selections).".".$ext;
+		$audio 					= FCPATH."".$ext."/audio.".$ext;
 		$tmppath 				= FCPATH."tmp/".$outputfilename;
 		$outputpath 			= FCPATH."output/".$outputfilename;
 		$output_http_location 	= base_url()."output/".$outputfilename;
@@ -76,9 +81,9 @@ class Encoder extends CI_Controller {
 				$response->status = "failed";
 				$response->error = "failed to write tmp file : ". $result;
 			}	
-		}	
+		}
 
-		echo json_encode($response);
+		return $response;
 	}
 }
 
