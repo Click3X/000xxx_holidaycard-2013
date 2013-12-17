@@ -80,7 +80,7 @@
 
             var _name       = "Happy Holidays from Click 3X",
             _caption        = "I just built a custom 2014 new year's video! Check it out, and create your own.",
-            _description    = header_text,
+            _description    = "For every video that is shared we will donate $1 to the following three charities: 52nd Street Project, Food Bank and The Phillippines St. Joseph’s School of Mactan.",
             _link           = base_url + "home/video?data=" + JSON.stringify(sel),
             _picture        = current_fbimage;
 
