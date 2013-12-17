@@ -1,7 +1,7 @@
 <?php 
   $data = array(
     "page_id" => "home",
-    "header_text" => "Pick a clip for each number to create a custom 2014 video. Then share it!"
+    "header_text" => "Pick a clip for each number to create a custom 2014 video. Then share it! For every video that is shared we will donate $1 to the following three charities: 52nd Street Project, Food Bank and The Phillippines St. Joseph’s School of Mactan."
   );
 ?>
 
