@@ -44,7 +44,7 @@ class Image_Builder
 			$result = imagejpeg($composite, $save_location);
 
 			//save image to folder
-			if($result)
+			if($result){
 				$response->status 	= "success";
 				$response->url 		= $http_location;
 			} else {

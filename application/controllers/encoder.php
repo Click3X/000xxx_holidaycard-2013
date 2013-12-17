@@ -32,6 +32,25 @@ class Encoder extends CI_Controller {
 		echo "<img src='".$file_path."' />";
 	}
 
+	public function testcombine($_selections){
+		$selections = explode("-", $_selections);
+
+		$this->load->library("image_builder");
+
+		$mp4 = $this->concatByExtension( $selections, "mp4" );
+		$webm = $this->concatByExtension( $selections, "webm" );
+		$img = $this->image_builder->composite($selections);
+
+		$res = (object) "response";
+		$res->status = ($mp4->status == "success" && $webm->status == "success" && $image->status == "success") ? "success" : "error";
+
+		$res->mp4 	= $mp4;
+		$res->webm 	= $webm;
+		$res->img 	= $img;
+
+		echo json_encode($res);
+	}
+
 	public function combine(){
 		$this->load->library("image_builder");
 
@@ -40,16 +59,16 @@ class Encoder extends CI_Controller {
 
 		$mp4 = $this->concatByExtension( $selections, "mp4" );
 		$webm = $this->concatByExtension( $selections, "webm" );
-		$image = $this->image_builder->composite($selections);
+		$img = $this->image_builder->composite($selections);
 
-		$response = (object) "response";
-		$response->status = ($mp4->status == "success" && $webm->status == "success" && $image->status == "success") ? "success" : "error";
+		$res = (object) "response";
+		$res->status = ($mp4->status == "success" && $webm->status == "success" && $image->status == "success") ? "success" : "error";
 
-		$response->mp4 		= $mp4;
-		$response->webm 	= $webm;
-		$resopnse->image 	= $image;
+		$res->mp4 	= $mp4;
+		$res->webm 	= $webm;
+		$res->img 	= $img;
 
-		echo json_encode($response);
+		echo json_encode($res);
  	}
 
 	public function concatByExtension($selections, $ext = "mp4"){
