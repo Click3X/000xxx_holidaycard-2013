@@ -22,6 +22,16 @@ class Encoder extends CI_Controller {
 		echo "Call the combine method to concatenate your videos.";
 	}
 
+	public function testimage($_selections){
+		$selections = explode("-", $_selections);
+		$this->load->library("image_builder");
+
+		$file_path = $this->image_builder->composite($selections);
+
+		//header('Content-Type: image/jpg');
+		echo "<img src='".$file_path."' />";
+	}
+
 	public function combine(){
 		$post = $this->input->post();
 		$selections = json_decode($post["selections"]);
@@ -32,8 +42,9 @@ class Encoder extends CI_Controller {
 		$response = (object) "response";
 		$response->status = ($mp4->status == "success" && $webm->status == "success") ? "success" : "error";
 
-		$response->mp4 = $mp4;
-		$response->webm = $webm;
+		$response->mp4 		= $mp4;
+		$response->webm 	= $webm;
+		$resopnse->image 	= $this->image_builder->composite($selections);
 
 		echo json_encode($response);
  	}
