@@ -24,56 +24,91 @@
 (function($) {
     $.extend({
         initUserAgent: function() {
-            var settings = {};
-            settings.agent = navigator.userAgent;
-            settings.aspect_ratio = window.devicePixelRatio || 1;
+            var s = {};
+            s.agent = navigator.userAgent;
+            s.ar = window.devicePixelRatio || 1;
 
-            if( settings.agent.match(/iPhone/i) || settings.agent.match(/iPod/i) ){
-                settings.iphone = true;
-                $("html").addClass("iphone");       
-            }else if( settings.agent.match(/iPad/i) ){
-                settings.ipad = true;
-                $("html").addClass("ipad");
-            }else if ( settings.agent.match(/Android/i) ){
-                settings.android = true;
-                $("html").addClass("android");
-            }else if( settings.agent.match(/Mac OS/i)){
-                settings.mac = true;
-                $("html").addClass("macos");
-            }else if( settings.agent.match(/Windows/i)){
-                settings.windows = true;
-                $("html").addClass("windowsos");
+            // if( s.agentgent.match(/iPhone/i) || s.agentgent.match(/iPod/i) ){
+            //     s.iphone = true;
+            //     $("html").addClass("iphone");       
+            // }else if( s.agentgent.match(/iPad/i) ){
+            //     s.ipad = true;
+            //     $("html").addClass("ipad");
+            // }else if ( s.agentgent.match(/Android/i) ){
+            //     s.agentndroid = true;
+            //     $("html").addClass("android");
+            // }else if( s.agentgent.match(/Mac OS/i)){
+            //     s.mac = true;
+            //     $("html").addClass("macos");
+            // }else if( s.agentgent.match(/Windows/i)){
+            //     s.windows = true;
+            //     $("html").addClass("windowsos");
+            // }
+
+            // if( s.agentgent.match(/Mobile/i) ){
+            //     s.mobile = true;
+            //     $("html").addClass("mobile");
+            // }
+
+            // if(s.iphone || s.ipad){
+            //     s.ios = true;
+
+            //     if( s.agentspect_ratio == 2 ){
+            //         s.retina = true;
+            //         $("html").addClass("retina");
+            //     }
+
+            //     if( s.agentgent.match(/4_/i) ){
+            //         s.ios_version = 4;
+            //         $("html").addClass("ios4");
+            //     } else if( s.agentgent.match(/5_/i) ){
+            //         s.ios_version = 5;
+            //         $("html").addClass("ios5");
+            //     } else if( s.agentgent.match(/6_/i) ){
+            //         s.ios_version = 6;
+            //         $("html").addClass("ios6");
+            //     } else if( s.agentgent.match(/7_/i) ){
+            //         s.ios_version = 7;
+            //         $("html").addClass("ios7");
+            //     }
+            // }
+
+            //os
+            s.mac          = s.agent.indexOf("Mac OS") > -1;
+            s.windows      = s.agent.indexOf("Windows") > -1;
+
+
+            //browser
+            s.chrome       = s.agent.indexOf("Chrome") > -1;
+            s.ie           = s.agent.indexOf("MSIE") > -1;
+            s.firefox      = s.agent.indexOf("Firefox") > -1;
+            s.safari       = s.agent.indexOf("Safari") > -1;
+            s.opera        = s.agent.indexOf("Presto") > -1;
+
+            //mobile
+            s.mobile       = s.agent.indexOf("Mobile") > -1;
+            s.iphone       = s.agent.indexOf("iPhone") > -1 || s.agent.indexOf("iPod") > -1;
+            s.ipad         = s.agent.indexOf("iPad") > -1;
+            s.android      = s.agent.indexOf("Android") > -1;
+
+            if( (s.chrome) && (s.safari) ){
+                s.safari = false;
             }
 
-            if( settings.agent.match(/Mobile/i) ){
-                settings.mobile = true;
-                $("html").addClass("mobile");
+            //retina?
+            if( s.ar == 2 ){
+                s.retina = true;
             }
 
-            if(settings.iphone || settings.ipad){
-                settings.ios = true;
+            return s;
+        },
 
-                if( settings.aspect_ratio == 2 ){
-                    settings.retina = true;
-                    $("html").addClass("retina");
-                }
+        getVideoExtension: function(){
+            var ext = "mp4";
+            if(main.settings.firefox === true)
+                ext = "webm";
 
-                if( settings.agent.match(/4_/i) ){
-                    settings.ios_version = 4;
-                    $("html").addClass("ios4");
-                } else if( settings.agent.match(/5_/i) ){
-                    settings.ios_version = 5;
-                    $("html").addClass("ios5");
-                } else if( settings.agent.match(/6_/i) ){
-                    settings.ios_version = 6;
-                    $("html").addClass("ios6");
-                } else if( settings.agent.match(/7_/i) ){
-                    settings.ios_version = 7;
-                    $("html").addClass("ios7");
-                }
-            }
-
-            return settings;
+            return ext;
         },
 
         shareOnFacebook: function(e) {

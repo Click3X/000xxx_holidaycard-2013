@@ -4,7 +4,6 @@ paths		= {};
 
 paths.selected_thumbs	= "img/thumbnails/300/";
 paths.posters			= "img/thumbnails/600/";
-paths.videos 			= "mp4/";
 
 var selections = [];
 var current_category = {id:null,index:null};
@@ -18,6 +17,15 @@ main.settings = {};
 
 jQuery( function($){
 	main.settings = $.initUserAgent();
+
+	for(var i in main.settings	 ){
+	    if(main.settings[i] === true){
+	    	$("html").addClass(i);
+	    	$("html").prepend('<span style="font-size:14px; color:#666"> '+i+'</span>');
+	    }
+	}
+
+	console.log(main.settings.sys);
 
 	preview_video 				= $("#preview video");
 	preview_video_controls 		= $("#preview div.play-controls");
@@ -109,9 +117,11 @@ events.onPreviewThumbClicked = function( e ){
 	var _thumb 		= $(this).parent().parent(),
 	_thumb_id		= _thumb.attr("data-id"),
 	_category 		= _thumb.attr("data-video-category"),
-	_category_index = $.inArray(_category,categories);
+	_category_index = $.inArray(_category,categories),
+	_vid_ext		= $.getVideoExtension();
 
-	modal_video.attr("src", base_url + paths.videos + _category + "_" + _thumb_id + ".mp4" );
+	modal_video.attr("type","video/" + _vid_ext);
+	modal_video.attr("src", base_url + _vid_ext + "/" + _category + "_" + _thumb_id + "." + _vid_ext );
 	modal_video.attr("poster", base_url + paths.posters + _category + "_" + _thumb_id + ".jpg" );
 	preview_video.load();
 

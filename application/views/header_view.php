@@ -24,7 +24,6 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/<?=$page_id;?>.css">
 
         <script src="<?=base_url();?>js/facebook_all.js"></script>
-        <script src="<?=base_url();?>js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
     </head>
     <body>
