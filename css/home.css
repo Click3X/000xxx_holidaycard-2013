@@ -147,10 +147,10 @@
 	-webkit-transition: bottom .3s;
 	border-top: 1px solid #111;
 }
-.touch .thumbnail{
+.mobile .thumbnail{
 	padding-bottom: 40px;
 }
-.touch .thumbnail div.hover-state{
+.mobile .thumbnail div.hover-state{
 	bottom:0;
 }
 .thumbnail div.hover-state p{
@@ -328,7 +328,7 @@
 		font-size: 10px;
 		letter-spacing: .05em;
 	}
-	.touch .thumbnail{
+	.mobile .thumbnail{
 		padding-bottom:30px;
 	}
 	#edit-video-nav-container p {
