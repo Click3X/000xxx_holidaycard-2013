@@ -213,11 +213,11 @@ main.getCombinedVideo = function(){
 
 			    main.onVideoPreviewReady();
             }else{
-            	console.log("ffmpeg video error: " + response.error);
+            	console.log("ffmpeg video error: " + response);
             }
         },
         error:function(error){
-        	console.log("server video error");
+        	console.log("server video error" + error);
         }
     });
 
