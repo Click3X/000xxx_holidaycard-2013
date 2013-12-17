@@ -42,7 +42,7 @@
                   <p class="preview-btn">preview</p><!--
                   --><p class="add-btn">Add</p>
                 </div>
-                <img width="300" height="300" data-src="<?=base_url();?>img/thumbnails/300/<?= $id; ?>_<?= $i; ?>.jpg" alt="<?= $id;?> Video <?= $i;?>" src="<?=base_url();?>img/thumbnails/300/<?= $id; ?>_<?= $i; ?>.jpg">
+                <img width="300" height="300" data-hover-src="<?=base_url();?>img/thumbnails/300/<?= $id; ?>_<?= $i; ?>.jpg" data-src="<?=base_url();?>img/thumbnails/300/<?= $id; ?>_<?= $i; ?>r.jpg" alt="<?= $id;?> Video <?= $i;?>" src="<?=base_url();?>img/thumbnails/300/<?= $id; ?>_<?= $i; ?>r.jpg">
               </div>
             </div>
             <?php endfor; ?>

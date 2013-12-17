@@ -47,6 +47,9 @@ main.addEventListeners = function(){
 	$(".thumbnail p.add-btn").click( events.onAddClicked );
 	$(".thumbnail p.preview-btn").click( events.onPreviewThumbClicked );
 
+	$(".thumbnail").mouseover( events.thumbImageOver );
+	$(".thumbnail").mouseout( events.thumbImageOut );
+
 	$('#nav-container li a').click(function (e) {
 		e.preventDefault();
 		main.showCategory( $(this).attr("data-id") );
@@ -69,6 +72,20 @@ main.addEventListeners = function(){
 	});
 
 	$(".modal-close").click( main.closeModalClicked );
+}
+
+events.thumbImageOver = function(){
+	var t = $(this);
+	var img = t.children("img").eq(0);
+	var src = img.attr("data-hover-src");
+	img.attr("src",src);
+}
+
+events.thumbImageOut = function(){
+	var t = $(this);
+	var img = t.children("img").eq(0);
+	var src = img.attr("data-src");
+	img.attr("src",src);
 }
 
 main.closeModalClicked = function(e){
@@ -282,7 +299,7 @@ main.videoChanged = function( $category, $thumb_id ){
 	var _span = _li.children("span").eq(0);
 
 	if($thumb_id != undefined){
-		var _filename = $category + "_" + $thumb_id + ".jpg";
+		var _filename = $category + "_" + $thumb_id + "r.jpg";
 
 		if(!_li.hasClass("selected"))
 			_li.addClass("selected");
