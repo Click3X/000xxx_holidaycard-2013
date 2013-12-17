@@ -164,6 +164,10 @@ main.onRemoveClicked = function( e ){
 	selections[ _category_index ] = "none";
 	main.videoChanged(_category_id);
 	main.showCategory(_category_id);
+
+	$("#preview").fadeOut(200, function(){
+		main.resetPreviewVideo();
+	});
 }
 
 main.nextCategory = function(){
