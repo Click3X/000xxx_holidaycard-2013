@@ -10,7 +10,8 @@
         <title>Happy Holidays from Click 3X</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/><!--320-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 
         <style>
             body {
