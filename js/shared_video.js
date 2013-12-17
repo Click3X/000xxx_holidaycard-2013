@@ -1,4 +1,5 @@
 var main = {};
+var current_fbimage;
 
 jQuery( function($){
 	main.settings = $.initUserAgent();
@@ -19,6 +20,8 @@ jQuery( function($){
 		main.playPreviewVideo();
 	});
 
+	current_fbimage = base_url + "output/images" + video_filename + ".jpg";
+	
 	$('video').attr("type","video/" + main.video_ext);
 	$('video').attr("src",base_url + "output/" + video_filename + "." + main.video_ext);
 	$('video').get(0).load();
