@@ -1,7 +1,3 @@
-function gaTrackEvent( _action, _label ){
-    ga('send', 'event', _action, 'click', _label);
-}
-
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
@@ -71,7 +67,7 @@ function gaTrackEvent( _action, _label ){
         },
 
         shareOnFacebook: function(e) {
-            gaTrackEvent("share","facebook");
+            _gaq.push(['_trackEvent', 'video', 'share', "facebook" ]);
 
             var _selections = [];
             $.each(selections,function(i,v){
@@ -104,7 +100,7 @@ function gaTrackEvent( _action, _label ){
         },
 
         shareOnTwitter: function(e){
-            gaTrackEvent("share","twitter");
+            _gaq.push(['_trackEvent', 'video', 'share', "twitter" ]);
 
             var _selections = [];
             $.each(selections,function(i,v){

@@ -6,13 +6,6 @@
         <script src="<?php echo base_url(); ?>js/<?=$page_id;?>.js"></script>
 
         <script>
-            var _gaq=[['_setAccount','<?php echo GA_ACCOUNT; ?>'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-
-        <script>
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', '<?= GA_ACCOUNT; ?>'] );
           _gaq.push(['_setDomainName', 'holidays.click3x.com'] );

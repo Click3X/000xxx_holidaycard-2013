@@ -204,7 +204,7 @@ main.resetPreviewVideo = function(){
 
 main.initVideoPreviewMode = function(){
 	$("#build").fadeTo(300,0,function(){
-		gaTrackEvent("create_video", selections.join("-") );
+		_gaq.push(['_trackEvent', 'video', 'create', selections.join("-") ]);
 
 		main.getCombinedVideo();
 	});
