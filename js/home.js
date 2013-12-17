@@ -326,6 +326,6 @@ main.videoChanged = function( $category, $thumb_id ){
 		if(_li.hasClass("selected"))
 			_li.removeClass("selected");
 
-		_span.css( "background-image", "url('../img/gray_button_bg.jpg')" );
+		_span.css( "background-image", "url("+base_url+"img/gray_button_bg.jpg')" );
 	}
 }
