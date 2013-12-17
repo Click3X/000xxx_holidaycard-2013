@@ -34,19 +34,20 @@ class Encoder extends CI_Controller {
 
 	public function combine(){
 		$this->load->library("image_builder");
-		
+
 		$post = $this->input->post();
 		$selections = json_decode($post["selections"]);
 
 		$mp4 = $this->concatByExtension( $selections, "mp4" );
 		$webm = $this->concatByExtension( $selections, "webm" );
+		$image = $this->image_builder->composite($selections);
 
 		$response = (object) "response";
 		$response->status = ($mp4->status == "success" && $webm->status == "success") ? "success" : "error";
 
 		$response->mp4 		= $mp4;
 		$response->webm 	= $webm;
-		$resopnse->image 	= $this->image_builder->composite($selections);
+		$resopnse->image 	= $image;
 
 		echo json_encode($response);
  	}
