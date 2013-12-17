@@ -3,12 +3,24 @@ var main = {};
 jQuery( function($){
 	main.settings = $.initUserAgent();
 
+	for(var i in main.settings	 ){
+	    if(main.settings[i] === true){
+	    	$("html").addClass(i);
+	    	$("html").prepend('<span style="font-size:14px; color:#666"> '+i+'</span>');
+	    }
+	}
+
+	main.video_ext = $.getVideoExtension();
+
+	console.log(main.settings.sys);
+
 	$('.play-controls a.glyphicon-play').click(function (e) {
 		e.preventDefault();
 		main.playPreviewVideo();
 	});
 
-	$('video').attr("src",base_url + "output/" + video_filename);
+	$('video').attr("type","video/" + main.video_ext);
+	$('video').attr("src",base_url + "output/" + video_filename + "." + main.video_ext);
 	$('video').get(0).load();
 
 	$('#share-nav #facebook-btn').click($.shareOnFacebook);

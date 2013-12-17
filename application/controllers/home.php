@@ -27,7 +27,7 @@ class Home extends CI_Controller {
 
 		$data = json_decode($get["data"]);
 
-		$filename = implode("-", $data->selections).".mp4";
+		$filename = implode("-", $data->selections);
 		$this->load->view("shared_video_view",array("selections"=>json_encode($data->selections),"filename"=>$filename));
 	}
 }
