@@ -62,7 +62,7 @@ class Encoder extends CI_Controller {
 		$img = $this->image_builder->composite($selections);
 
 		$res = (object) "response";
-		$res->status = ($mp4->status == "success" && $webm->status == "success" && $image->status == "success") ? "success" : "error";
+		$res->status = ($mp4->status == "success" && $webm->status == "success" && $img->status == "success") ? "success" : "error";
 
 		$res->mp4 	= $mp4;
 		$res->webm 	= $webm;
