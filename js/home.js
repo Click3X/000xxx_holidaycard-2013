@@ -25,6 +25,8 @@ jQuery( function($){
 	    }
 	}
 
+	main.video_ext = $.getVideoExtension();
+
 	console.log(main.settings.sys);
 
 	preview_video 				= $("#preview video");
@@ -117,11 +119,10 @@ events.onPreviewThumbClicked = function( e ){
 	var _thumb 		= $(this).parent().parent(),
 	_thumb_id		= _thumb.attr("data-id"),
 	_category 		= _thumb.attr("data-video-category"),
-	_category_index = $.inArray(_category,categories),
-	_vid_ext		= $.getVideoExtension();
+	_category_index = $.inArray(_category,categories);
 
-	modal_video.attr("type","video/" + _vid_ext);
-	modal_video.attr("src", base_url + _vid_ext + "/" + _category + "_" + _thumb_id + "." + _vid_ext );
+	modal_video.attr("type", "video/" + main.video_ext );
+	modal_video.attr("src", base_url + main.video_ext + "/" + _category + "_" + _thumb_id + "." + main.video_ext );
 	modal_video.attr("poster", base_url + paths.posters + _category + "_" + _thumb_id + ".jpg" );
 	preview_video.load();
 
@@ -218,7 +219,8 @@ main.getCombinedVideo = function(){
             	console.log("success:");
             	console.log(response);
 
-            	preview_video.attr('src', response.mp4.video);
+            	preview_video.attr('type', "video/" + main.video_ext);
+            	preview_video.attr('src', response[main.video_ext]["video"] );
 			    preview_video.load();
 
 			    main.onVideoPreviewReady();
