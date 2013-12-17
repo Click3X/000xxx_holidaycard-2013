@@ -24,11 +24,19 @@ class Encoder extends CI_Controller {
 
 	public function combine(){
 		$post = $this->input->post();
-		$_selections = json_decode($post["selections"]);
+		$selections = json_decode($post["selections"]);
 
-		$mp4 = $this->concatByExtension( $_selections, "mp4" );
-		$webm = $this->concatByExtension( $_selections, "webm" );
-	}
+		$mp4 = $this->concatByExtension( $selections, "mp4" );
+		$webm = $this->concatByExtension( $selections, "webm" );
+
+		$response = (object) "response";
+		$response->status == ($mp4->status == "success" && $webm->status == "success");
+
+		$response->mp4 = $mp4;
+		$response->mp4 = $webm;
+
+		echo json_encode($response);
+ 	}
 
 	public function concatByExtension($selections, $ext = "mp4"){
 		$files = array();

@@ -205,9 +205,10 @@ main.getCombinedVideo = function(){
         dataType: "json",
         success: function (response) {
             if(response.status == "success"){
-            	console.log("success : " + response.video);
+            	console.log("success : " + response.status);
+            	console.log(response);
 
-            	preview_video.attr('src', response.video);
+            	preview_video.attr('src', response.mp4.video);
 			    preview_video.load();
 
 			    main.onVideoPreviewReady();
