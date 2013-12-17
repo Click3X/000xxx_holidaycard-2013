@@ -5,8 +5,6 @@
   );
 ?>
 
-
-
 <? $this->load->view("header_view",$data); ?>
 
 <script type="text/javascript">
