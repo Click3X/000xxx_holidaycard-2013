@@ -27,7 +27,7 @@ jQuery( function($){
 
 	main.video_ext = $.getVideoExtension();
 
-	console.log(main.settings.sys);
+	console.log(main.settings);
 
 	preview_video 				= $("#preview video");
 	preview_video_controls 		= $("#preview div.play-controls");
@@ -204,6 +204,8 @@ main.resetPreviewVideo = function(){
 
 main.initVideoPreviewMode = function(){
 	$("#build").fadeTo(300,0,function(){
+		$.gaTrackEvent("create_video", selections.join("-") );
+
 		main.getCombinedVideo();
 	});
 }

@@ -28,51 +28,6 @@
             s.agent = navigator.userAgent;
             s.ar = window.devicePixelRatio || 1;
 
-            // if( s.agentgent.match(/iPhone/i) || s.agentgent.match(/iPod/i) ){
-            //     s.iphone = true;
-            //     $("html").addClass("iphone");       
-            // }else if( s.agentgent.match(/iPad/i) ){
-            //     s.ipad = true;
-            //     $("html").addClass("ipad");
-            // }else if ( s.agentgent.match(/Android/i) ){
-            //     s.agentndroid = true;
-            //     $("html").addClass("android");
-            // }else if( s.agentgent.match(/Mac OS/i)){
-            //     s.mac = true;
-            //     $("html").addClass("macos");
-            // }else if( s.agentgent.match(/Windows/i)){
-            //     s.windows = true;
-            //     $("html").addClass("windowsos");
-            // }
-
-            // if( s.agentgent.match(/Mobile/i) ){
-            //     s.mobile = true;
-            //     $("html").addClass("mobile");
-            // }
-
-            // if(s.iphone || s.ipad){
-            //     s.ios = true;
-
-            //     if( s.agentspect_ratio == 2 ){
-            //         s.retina = true;
-            //         $("html").addClass("retina");
-            //     }
-
-            //     if( s.agentgent.match(/4_/i) ){
-            //         s.ios_version = 4;
-            //         $("html").addClass("ios4");
-            //     } else if( s.agentgent.match(/5_/i) ){
-            //         s.ios_version = 5;
-            //         $("html").addClass("ios5");
-            //     } else if( s.agentgent.match(/6_/i) ){
-            //         s.ios_version = 6;
-            //         $("html").addClass("ios6");
-            //     } else if( s.agentgent.match(/7_/i) ){
-            //         s.ios_version = 7;
-            //         $("html").addClass("ios7");
-            //     }
-            // }
-
             //os
             s.mac          = s.agent.indexOf("Mac OS") > -1;
             s.windows      = s.agent.indexOf("Windows") > -1;
@@ -103,6 +58,10 @@
             return s;
         },
 
+        gaTrackEvent:function( _action, _label ){
+            ga('send', 'event', _action, 'click', _label);
+        },
+
         getVideoExtension: function(){
             var ext = "mp4";
             if(main.settings.firefox === true)
@@ -112,6 +71,8 @@
         },
 
         shareOnFacebook: function(e) {
+            $.gaTrackEvent("share","facebook");
+
             var _selections = [];
             $.each(selections,function(i,v){
                 _selections.push(parseInt(v));
@@ -143,6 +104,8 @@
         },
 
         shareOnTwitter: function(e){
+            $.gaTrackEvent("share","twitter");
+
             var _selections = [];
             $.each(selections,function(i,v){
                 _selections.push(parseInt(v));
