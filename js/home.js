@@ -165,6 +165,8 @@ main.onRemoveClicked = function( e ){
 	main.videoChanged(_category_id);
 	main.showCategory(_category_id);
 
+	$("#build").fadeTo(200,0);
+	
 	$("#preview").fadeOut(200, function(){
 		main.resetPreviewVideo();
 	});
