@@ -234,7 +234,8 @@ main.getCombinedVideo = function(){
 
             	preview_video.attr('type', "video/" + main.video_ext);
             	preview_video.attr('src', response[main.video_ext]["video"] );
-            	current_fbimage = response.image;
+            	current_fbimage = response["image"]["url"];
+
 			    preview_video.load();
 
 			    main.onVideoPreviewReady();

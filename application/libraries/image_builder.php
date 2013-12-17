@@ -21,8 +21,11 @@ class Image_Builder
 		$save_location 	= FCPATH."output/images/".$save_name;
 		$http_location 	= base_url()."output/images/".$save_name;
 
+		$response = (object) "response";
+
 		if( file_exists($save_location) ){
-			return $http_location;
+			$response->status 	= "success";
+			$response->url 		= $http_location;
 		}else{
 			$composite 	= imagecreatetruecolor( 600, 600 );
 
@@ -38,14 +41,22 @@ class Image_Builder
 				imagedestroy( $img );
 			}
 
+			$result = imagejpeg($composite, $save_location);
+
 			//save image to folder
-			imagejpeg($composite, $save_location);
+			if($result)
+				$response->status 	= "success";
+				$response->url 		= $http_location;
+			} else {
+				$response->status 	= "failed";
+				$response->error 	= "failed to save image";
+			}
 
 			//kill composite
 			imagedestroy($composite);
-
-			return $http_location;
 		}
+
+		return $response;
 	}	
 
 }
