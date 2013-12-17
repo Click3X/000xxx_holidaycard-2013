@@ -205,7 +205,7 @@ main.getCombinedVideo = function(){
         dataType: "json",
         success: function (response) {
             if(response.status == "success"){
-            	console.log("success : " + response.status);
+            	console.log("success:");
             	console.log(response);
 
             	preview_video.attr('src', response.mp4.video);
@@ -213,11 +213,13 @@ main.getCombinedVideo = function(){
 
 			    main.onVideoPreviewReady();
             }else{
-            	console.log("ffmpeg video error: " + response);
+            	console.log("ffmpeg video error:");
+            	console.log(response);
             }
         },
         error:function(error){
-        	console.log("server video error" + error);
+        	console.log("server video error:");
+        	console.log(error);
         }
     });
 

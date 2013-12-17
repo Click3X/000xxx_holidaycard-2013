@@ -55,7 +55,7 @@ class Encoder extends CI_Controller {
 
 		//build the ffmpeg command and exec
 		$outputfilename 		= implode("-", $selections).".".$ext;
-		$audio 					= FCPATH."".$ext."/audio.".$ext;
+		$audio 					= FCPATH.$ext."/audio.".$ext;
 		$tmppath 				= FCPATH."tmp/".$outputfilename;
 		$outputpath 			= FCPATH."output/".$outputfilename;
 		$output_http_location 	= base_url()."output/".$outputfilename;
