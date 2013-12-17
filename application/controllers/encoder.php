@@ -66,7 +66,7 @@ class Encoder extends CI_Controller {
 
 		$res->mp4 	= $mp4;
 		$res->webm 	= $webm;
-		$res->img 	= $img;
+		$res->image = $img;
 
 		echo json_encode($res);
  	}
