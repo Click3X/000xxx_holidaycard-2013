@@ -14,7 +14,7 @@
 |
 */
 
-define('GA_ACCOUNT', "UA-3675967-1");
+define('GA_ACCOUNT', "UA-3675967-14");
 define('FBAPP_ID', "1504013326489864");
 define('BITLY_TOKEN', "ce1cb3356808fcf009cda750ef8f1ce940c592a8");
 
