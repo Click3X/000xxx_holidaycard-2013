@@ -33,7 +33,7 @@ class Encoder extends CI_Controller {
 		$response->status == ($mp4->status == "success" && $webm->status == "success");
 
 		$response->mp4 = $mp4;
-		$response->mp4 = $webm;
+		$response->webm = $webm;
 
 		echo json_encode($response);
  	}
