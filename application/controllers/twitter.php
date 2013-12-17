@@ -22,10 +22,11 @@ class Twitter extends CI_Controller {
 		echo "Call share to post a tweet";
 	}
 
-	public function share($_status, $_link)
+	public function share($_selections)
 	{		
-		$link 		= base_url(). "home/video". urldecode($_link);
+		$link 		= base_url(). "home/video?data=". urldecode($_selections);
 		$short_url 	= $this->getbitly($link);
+		$status 	= "I just built a custom 2014 new year's video! Check it out, and create your own.";
 
 		header( 'Location: https://twitter.com/intent/tweet?source=webclient&text='.$_status.'%20'.$short_url  ) ;
 	}

@@ -77,7 +77,7 @@
             var sel = {selections:_selections};
 
             var _name       = "Happy Holidays from Click 3X",
-            _caption        = "holidays.click3x.com",
+            _caption        = "I just built a custom 2014 new year's video! Check it out, and create your own.",
             _description    = header_text,
             _link           = base_url + "home/video?data=" + JSON.stringify(sel),
             _picture        = base_url + "img/thumbnails/200/2_" + _selections[0] + ".jpg"
@@ -110,10 +110,9 @@
             var sel = {selections:_selections};
 
             var _route      = base_url + "twitter/share",
-            _status         = "Happy Holidays from Click 3X. " + header_text,
-            _link           = "?data=" + JSON.stringify(sel);
+            _selections     = JSON.stringify(sel);
 
-            window.open(    _route + "/" + escape(_status) + "/" + escape(_link), 
+            window.open(    _route + "/" + escape(_selections), 
                             "_blank", "width=500,height=300,top=200px,left=" + $(window).width()*.5);
         }
     });
