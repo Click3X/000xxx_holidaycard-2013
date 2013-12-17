@@ -7,6 +7,7 @@ paths.posters			= "img/thumbnails/600/";
 
 var selections = [];
 var current_category = {id:null,index:null};
+var current_fbimage;
 
 var preview_video;
 var preview_video_controls;
@@ -233,6 +234,7 @@ main.getCombinedVideo = function(){
 
             	preview_video.attr('type', "video/" + main.video_ext);
             	preview_video.attr('src', response[main.video_ext]["video"] );
+            	current_fbimage = response.image;
 			    preview_video.load();
 
 			    main.onVideoPreviewReady();

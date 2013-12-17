@@ -80,7 +80,7 @@
             _caption        = "I just built a custom 2014 new year's video! Check it out, and create your own.",
             _description    = header_text,
             _link           = base_url + "home/video?data=" + JSON.stringify(sel),
-            _picture        = base_url + "img/thumbnails/200/2_" + _selections[0] + ".jpg"
+            _picture        = current_fbimage;
 
             FB.ui({
                method: 'feed',
