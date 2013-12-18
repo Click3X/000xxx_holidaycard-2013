@@ -22,7 +22,7 @@ jQuery( function($){
 	for(var i in main.settings	 ){
 	    if(main.settings[i] === true){
 	    	$("html").addClass(i);
-	    	$("html").prepend('<span style="font-size:14px; color:#666"> '+i+'</span>');
+	    	//$("html").prepend('<span style="font-size:14px; color:#666"> '+i+'</span>');
 	    }
 	}
 
