@@ -74,6 +74,7 @@ main.addEventListeners = function(){
 		main.initVideoPreviewMode();
 	});
 
+	$('#share-nav #create-btn').click(events.startOverClicked);
 	$('#share-nav #facebook-btn').click($.shareOnFacebook);
 	$('#share-nav #twitter-btn').click($.shareOnTwitter);
 
@@ -83,6 +84,22 @@ main.addEventListeners = function(){
 	});
 
 	$(".modal-close").click( main.closeModalClicked );
+}
+
+events.startOverClicked = function(){
+	selections = [];
+	$.each(categories, function(i,v){
+		selections.push("none");
+	});
+	
+	main.videoChanged(_category_id);
+	main.showCategory(_category_id);
+
+	$("#build").fadeTo(200,0);
+
+	$("#preview").fadeOut(200, function(){
+		main.resetPreviewVideo();
+	});
 }
 
 events.thumbImageOver = function(){

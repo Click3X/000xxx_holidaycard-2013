@@ -84,6 +84,7 @@
   <div class="col-md-8 col-md-offset-2 section">
     <h4>Now share it!</h4>
     <ul id="share-nav"><!--
+    --><li id="create-btn"><a href="<?=base_url();?>">Start Over<br/><span class="glyphicon glyphicon-film"></a></li><!--
     --><li id="facebook-btn"></li><!--
     --><li id="twitter-btn"></li><!--
   --></ul>
